@@ -1,0 +1,9 @@
+[alias]
+	ci = commit
+	co = checkout
+	br = branch
+[user]
+	name = Kei Nohguchi
+	email = kei@nohguchi.com
+[push]
+	default = simple
