@@ -1,0 +1,7 @@
+.Xauthority
+.bash_history
+.lesshist
+.viminfo
+.cache/
+.local/
+.ssh/
