@@ -1,0 +1,9 @@
+# Global settings
+set realname='Kei Nohguchi'
+set editor=`echo \$EDITOR`
+
+# Global SMTP settings
+set use_from = yes
+
+# Home network configuration.
+source .mutt/home.conf
