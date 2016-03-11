@@ -7,3 +7,6 @@ set use_from = yes
 
 # Home network configuration.
 source .mutt/home.conf
+
+# White based coloring.
+source /usr/share/doc/mutt/samples/colors.default
