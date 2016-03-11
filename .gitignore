@@ -3,6 +3,9 @@
 .lesshist
 .viminfo
 .cache/
+.irssi/
 .local/
+.surf/
 .mutt/
 .ssh/
+src/
