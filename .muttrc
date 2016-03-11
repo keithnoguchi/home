@@ -1,12 +1,16 @@
-# Global settings
+# Global
 set realname='Kei Nohguchi'
 set editor=`echo \$EDITOR`
 
-# Global SMTP settings
+# Threading
+set narrow_tree=yes
+set ascii_chars=yes
+
+# Color
+source /usr/share/doc/mutt/samples/colors.default
+
+# SMTP settings
 set use_from = yes
 
-# Home network configuration.
+# Home specific
 source .mutt/home.conf
-
-# White based coloring.
-source /usr/share/doc/mutt/samples/colors.default
