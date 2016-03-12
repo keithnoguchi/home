@@ -7,3 +7,5 @@
 	email = kei@nohguchi.com
 [push]
 	default = simple
+[gitreview]
+	username = keinohguchi
