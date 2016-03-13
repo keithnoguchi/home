@@ -34,7 +34,7 @@ fi
 
 xsetroot -solid skyblue &
 while true; do
-  xsetroot -name "$(acpi -b)"
+  xsetroot -name "$(acpi -b),$(date +%l:%M%P)"
   sleep 1m
 done &
 exec dwm
