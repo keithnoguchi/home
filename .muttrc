@@ -13,4 +13,4 @@ source /usr/share/doc/mutt/samples/colors.default
 set use_from = yes
 
 # Home specific
-source .mutt/home.conf
+source ~/.mutt/home.conf
