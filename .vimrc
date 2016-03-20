@@ -21,7 +21,8 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" key mapping
 map Q gq
 
+" file type plugins
 filetype plugin indent on
-
