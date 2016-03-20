@@ -6,6 +6,7 @@ set backspace=indent,eol,start
 set history=50
 set incsearch
 set nobackup
+autocmd FileType text setlocal textwidth=78
 
 " menu bar related settings
 set ruler
@@ -23,3 +24,4 @@ endif
 map Q gq
 
 filetype plugin indent on
+
