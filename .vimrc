@@ -4,6 +4,7 @@
 set nocompatible
 set backspace=indent,eol,start
 set history=50
+set incsearch
 set nobackup
 
 " menu bar related settings
