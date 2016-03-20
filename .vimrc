@@ -6,7 +6,7 @@ set backspace=indent,eol,start
 set history=50
 set incsearch
 set nobackup
-autocmd FileType text setlocal textwidth=74
+autocmd FileType text setlocal textwidth=78
 
 " menu bar related settings
 set ruler
