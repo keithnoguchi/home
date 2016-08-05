@@ -15,7 +15,8 @@ export CHEF_SERVER=https://chef0/organizations/nohguchi
 export CHEF_CLIENT_KEY=${CHEF_HOME}/${CHEF_USER}.pem
 export CHEF_VALIDATION_KEY=${CHEF_HOME}/${CHEF_VALIDATOR}.pem
 export CHEF_CACHE_TYPE=BasicFile
-export CHEF_COOKBOOKS_PATH=/usr/local/git/chef/cookbooks
+export CHEF_COOKBOOK_PATH=/usr/local/git/chef/cookbooks
+export CHEF_COOKBOOK_COPYRIGHT="Kei Nohguchi"
 
 # Chef/Kitchen related config.
 export KITCHEN_LOCAL_YAML=${HOME}/.kitchen/config.yml
