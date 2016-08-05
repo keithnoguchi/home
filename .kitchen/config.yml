@@ -4,6 +4,5 @@ driver:
   ssh_key: '~/.ssh/id_vagrant'
   customize:
     memory: 512
-
 driver_config:
   ssh_key: '~/.ssh/id_vagrant'
