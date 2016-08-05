@@ -1,5 +1,6 @@
-export EDITOR=vim
+# Default settings
 export PS1='\h\$ '
+export EDITOR=vim
 export TERM=xterm-color
 
 # For Golang
