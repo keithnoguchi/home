@@ -5,7 +5,7 @@ export TERM=xterm-color
 
 # For Golang
 export GOPATH=~/go
-export PATH=$PATH:/usr/lib/go/bin
+export PATH=$PATH:${GOPATH}/bin
 
 # For Chef
 export CHEF_HOME=${HOME}/.chef
