@@ -4,8 +4,9 @@ export EDITOR=vim
 export TERM=xterm-color
 
 # For Golang
-export GOPATH=~/go
-export PATH=$PATH:${GOPATH}/bin
+export GOROOT=/usr/local/git/go
+export GOPATH=/usr/local/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # For Chef
 export CHEF_HOME=${HOME}/.chef
