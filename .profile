@@ -5,7 +5,7 @@ export TERM=xterm-color
 
 # For Golang
 export GOROOT=/usr/local/git/go
-export GOPATH=/usr/local/git/gopath
+export GOPATH=/usr/local/git/go-path
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # For Chef
