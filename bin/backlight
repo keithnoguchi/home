@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+DIFF=$1
+FILE=/sys/class/backlight/intel_backlight/brightness
+CURRENT=`cat $FILE`
+VALUE=$(expr $CURRENT + $DIFF)
+CMD="echo $VALUE > $FILE"
+sudo bash -c "$CMD"
