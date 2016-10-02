@@ -2,6 +2,7 @@
 export PS1='\h\$ '
 export EDITOR=vim
 export TERM=xterm-color
+export PATH=$HOME/bin:$PATH
 
 # For Golang
 export GOROOT=/usr/local/git/go
@@ -24,3 +25,4 @@ export KITCHEN_LOCAL_YAML=${HOME}/.kitchen/config.yml
 
 # For Ansible
 alias play=ansible-playbook
+alias p=parallel
