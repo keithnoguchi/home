@@ -4,6 +4,10 @@ export EDITOR=vim
 export TERM=xterm-color
 export PATH=$HOME/bin:$PATH
 
+# Aliases
+alias p=parallel
+alias play=ansible-playbook
+
 # For Golang
 export GOROOT=/usr/local/git/go
 export GOPATH=/usr/local/git/go-stage
@@ -22,7 +26,3 @@ export CHEF_COOKBOOK_COPYRIGHT="Kei Nohguchi"
 
 # Chef/Kitchen related config.
 export KITCHEN_LOCAL_YAML=${HOME}/.kitchen/config.yml
-
-# For Ansible
-alias play=ansible-playbook
-alias p=parallel
