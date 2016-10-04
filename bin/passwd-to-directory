@@ -31,3 +31,10 @@ sed -e 's=^\([^:]*\):[^/]*/\([^/]*\)/.*$=\1:\2=' <$USER | sort >$OFFICE
 
 # key:telephone
 sed -e 's=^\([^:]*\):[^/]*/[^/]*/\([^/]*\)=\1:\2=' <$USER | sort >$TELEPHONE
+
+# Join the entries
+join -t: $PERSON $OFFICE|
+join -t: - $TELEPHONE|
+cut -d: -f 2-|
+sort -t: -k1,1 -k2,2 -k3,3|
+awk -F: '{ printf("%-39s\t%s\t%s\n", $1, $2, $3) }'
