@@ -18,3 +18,16 @@ USER=/tmp/pd.key.user.$$
 # Taking care of the temp file handling
 trap "exit 1" 					HUP INT PIPE QUIT TERM
 trap "rm -f $PERSON $OFFICE $TELEPHONE $USER"	EXIT
+
+# key:user
+awk -F: '{ print $1 ":" $5 }' > $USER
+
+# key:Person name
+sed -e 's=/.*==' \
+	-e 's=^\([^:]*\):\(.*\) \([^ ]*\)=\1:\3, \2=' <$USER | sort >$PERSON
+
+# key:office
+sed -e 's=^\([^:]*\):[^/]*/\([^/]*\)/.*$=\1:\2' <$USER | sort >$OFFICE
+
+# key:telephone
+sed -e 's=^\([^:]*\):[^/]*/[^/]*/\([^/*\)=\1:\2=' <$USER | sort $TELEPHONE
