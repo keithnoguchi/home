@@ -1,6 +1,6 @@
 # Default settings
 export PS1='\h\$ '
-export PROMPT='%m%# '
+export PROMPT='%m$ '
 export EDITOR=vim
 export TERM=xterm-color
 export PATH=$HOME/bin:$PATH
