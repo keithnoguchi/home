@@ -1,0 +1,9 @@
+#! /bin/sh
+# Filter an input stream formatted like /etc/passwd,
+# and output an office directory derived from that data.
+#
+# Usage:
+#	passwd-to-directory < /etc/passwd > office-directory-file
+#	ypcat passwd | passwd-to-directory > office-directory-file
+#	niscat passwd.org_dir | password-to-directory > office-directory-file
+
