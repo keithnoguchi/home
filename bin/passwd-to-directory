@@ -7,3 +7,14 @@
 #	ypcat passwd | passwd-to-directory > office-directory-file
 #	niscat passwd.org_dir | password-to-directory > office-directory-file
 
+umask 077 # Restrict temporary file access to just us
+
+# Temporary files
+PERSON=/tmp/pd.key.person.$$
+OFFICE=/tmp/pd.key.office.$$
+TELEPHONE=/tmp/pd.key.telephone.$$
+USER=/tmp/pd.key.user.$$
+
+# Taking care of the temp file handling
+trap "exit 1" 					HUP INT PIPE QUIT TERM
+trap "rm -f $PERSON $OFFICE $TELEPHONE $USER"	EXIT
