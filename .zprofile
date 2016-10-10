@@ -25,3 +25,6 @@ export CHEF_COOKBOOK_COPYRIGHT="Kei Nohguchi"
 
 # Chef/Kitchen related config.
 export KITCHEN_LOCAL_YAML=${HOME}/.kitchen/config.yml
+
+# cURL
+export CURL_CA_BUNDLE=${HOME}/.curl/cacert.pem
