@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
 DIFF=$1
-FILE=/sys/class/backlight/intel_backlight/brightness
+DIR=/sys/class/backlight
+if [ -d "${DIR}/intel_backlight" ]
+then
+	DEV="intel_backlight"
+elif [ -d "${DIR}/acpi_video0" ]
+then
+	DEV="acpi_video0"
+fi
+FILE=${DIR}/${DEV}/brightness
 CURRENT=`cat $FILE`
 VALUE=$(expr $CURRENT + $DIFF)
 CMD="echo $VALUE > $FILE"
+echo $CMD
 sudo bash -c "$CMD"
