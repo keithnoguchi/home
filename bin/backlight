@@ -12,5 +12,4 @@ FILE=${DIR}/${DEV}/brightness
 CURRENT=`cat $FILE`
 VALUE=$(expr $CURRENT + $DIFF)
 CMD="echo $VALUE > $FILE"
-echo $CMD
 sudo bash -c "$CMD"
