@@ -1,0 +1,24 @@
+#!/bin/sh
+
+mouse_id=`xinput |grep -i mouse|sed -e 's/.*id=\([[:digit:]]*\).*/\1/'`
+if [ $? -ne 0 ]
+then
+	echo "Can't get the mouse device ID"
+	exit 1
+fi
+
+prop_id=`xinput list-props $mouse_id|grep -i natural|grep -v -i default|sed -e 's/.*(\([[:digit:]]*\)).*/\1/'`
+if [ $? -ne 0 ]
+then
+	echo "Can't get the natural scrolling property ID"
+	exit 1
+fi
+
+xinput set-prop $mouse_id $prop_id 1
+if [ $? -ne 0 ]
+then
+	echo "Can't enable the natural scrolling"
+	exit 1
+fi
+
+exit 0
