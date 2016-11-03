@@ -1,15 +1,16 @@
-#!/usr/bin/env bash
-DIFF=$1
-DIR=/sys/class/backlight
-if [ -d "${DIR}/intel_backlight" ]
+#!/bin/sh
+
+path=/sys/class/backlight
+if [ -d "$path/intel_backlight" ]
 then
-	DEV="intel_backlight"
-elif [ -d "${DIR}/acpi_video0" ]
+	file=$path/intel_backlight/brightness
+elif [ -d "$path/acpi_video0" ]
 then
-	DEV="acpi_video0"
+	file=$path/acpi_video0/brightness
+else
+	echo "can't find device"
+	exit 1
 fi
-FILE=${DIR}/${DEV}/brightness
-CURRENT=`cat $FILE`
-VALUE=$(expr $CURRENT + $DIFF)
-CMD="echo $VALUE > $FILE"
-sudo bash -c "$CMD"
+
+current=$(cat $file)
+sudo sh -c "echo $((current + $1)) > $file"
