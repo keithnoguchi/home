@@ -1,6 +1,12 @@
 #!/bin/sh
 
-mouse_id=`xinput |grep -i mouse|sed -e 's/.*id=\([[:digit:]]*\).*/\1/'`
+if [ $1 ]; then
+	name=$1
+else
+	name=mouse
+fi
+
+mouse_id=`xinput |grep -i $name|sed -e 's/.*id=\([[:digit:]]*\).*/\1/'`
 if [ $? -ne 0 ]
 then
 	echo "Can't get the mouse device ID"
