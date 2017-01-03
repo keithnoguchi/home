@@ -1,0 +1,30 @@
+#!/bin/sh
+
+WPA_HOME=/etc/wpa_supplicant
+IF_NAME=wlp3s0
+NEW_CONF=$WPA_HOME/${1}.conf
+WPA_CONF=$WPA_HOME/wpa_supplicant-$IF_NAME.conf
+RSV_CONF=/etc/resolv.conf
+RSV_SYSD=/run/systemd/resolve/resolv.conf
+SRV_CMD="systemctl restart wpa_supplicant@$IF_NAME"
+NET_CMD="systemctl restart systemd-networkd"
+
+x=sudo
+
+if [ ! -f $NEW_CONF ]; then
+	printf "No such file: $NEW_CONF\n"
+	exit 1
+fi
+
+if [ -f $WPA_CONF ]; then
+	$x rm $WPA_CONF
+fi
+
+if [ -f $RSV_CONF ]; then
+	$x rm $RSV_CONF
+fi
+
+$x ln -s $NEW_CONF $WPA_CONF
+$x ln -s $RSV_SYSD $RSV_CONF
+$x $SRV_CMD
+$x $NET_CMD
