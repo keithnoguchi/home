@@ -11,16 +11,16 @@ NET_CMD="systemctl restart systemd-networkd"
 
 x=sudo
 
-if [ ! -f $NEW_CONF ]; then
+if [ ! -f "$NEW_CONF" ]; then
 	printf "No such file: $NEW_CONF\n"
 	exit 1
 fi
 
-if [ -f $WPA_CONF ]; then
+if [ -f "$WPA_CONF" ]; then
 	$x rm $WPA_CONF
 fi
 
-if [ -f $RSV_CONF ]; then
+if [ -a "$RSV_CONF" ]; then
 	$x rm $RSV_CONF
 fi
 
