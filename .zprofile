@@ -2,6 +2,7 @@
 export EDITOR=vim
 export TERM=xterm-color
 export PATH=$HOME/bin:$PATH
+export PATH=/usr/local/git/data-science-at-the-command-line/tools:$PATH
 
 # Aliases
 alias p=parallel

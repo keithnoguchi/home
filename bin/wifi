@@ -20,7 +20,7 @@ if [ -f "$WPA_CONF" ]; then
 	$x rm $WPA_CONF
 fi
 
-if [ -a "$RSV_CONF" ]; then
+if [ -a "$RSV_CONF" -o -h "$RSV_CONF" ]; then
 	$x rm $RSV_CONF
 fi
 
