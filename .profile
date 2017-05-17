@@ -10,7 +10,7 @@ alias play=ansible-playbook
 
 # For Golang
 export GOROOT=/usr/local/git/go
-export GOPATH=/usr/local/git/go-stage
+export GOPATH=/usr/local/git/golib
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # For Chef
