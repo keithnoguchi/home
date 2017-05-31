@@ -7,6 +7,7 @@ export PATH=$HOME/bin:$PATH
 # Aliases
 alias p=parallel
 alias play=ansible-playbook
+alias tf=terraform
 
 # For Golang
 export GOROOT=/usr/local/git/go
