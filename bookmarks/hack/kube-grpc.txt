@@ -1,0 +1,1 @@
+https://medium.com/@riknauta/building-scalable-micro-services-with-kubernetes-grpc-linkerd-7ccafd179599
