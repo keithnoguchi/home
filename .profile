@@ -11,8 +11,8 @@ alias tf=terraform
 
 # For Golang
 export GOROOT=/usr/local/git/go
-export GOPATH=/usr/local/git/golib
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export GOPATH=$HOME
+export PATH=$GOROOT/bin:$PATH
 
 # For Chef
 export CHEF_HOME=${HOME}/.chef

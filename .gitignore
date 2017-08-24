@@ -9,4 +9,5 @@
 .mutt/
 .ssh/
 src/
+pkg/
 doc/
