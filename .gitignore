@@ -8,9 +8,10 @@
 .surf/
 .mutt/
 .ssh/
+downloads/
 kernel/
-git/
-doc/
 tmp/
+doc/
+git/
 pkg/
 src/
