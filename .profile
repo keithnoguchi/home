@@ -2,7 +2,6 @@
 export PS1='\h\$ '
 export EDITOR=vim
 export TERM=xterm-color
-export PATH=$HOME/bin:$PATH
 
 # Aliases
 alias p=parallel
@@ -10,9 +9,9 @@ alias play=ansible-playbook
 alias tf=terraform
 
 # For Golang
-export GOROOT=/usr/local/git/go
+export GOROOT=$HOME/git/go
 export GOPATH=$HOME
-export PATH=$GOROOT/bin:$PATH
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # For Chef
 export CHEF_HOME=${HOME}/.chef
