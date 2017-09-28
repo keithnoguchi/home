@@ -1,7 +1,8 @@
 [alias]
+	br = branch
 	ci = commit
 	co = checkout
-	br = branch
+	st = status
 [user]
 	name = Kei Nohguchi
 	email = kei@nohguchi.com
