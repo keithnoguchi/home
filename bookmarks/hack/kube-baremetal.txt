@@ -1,0 +1,1 @@
+http://blog.alexellis.io/kubernetes-in-10-minutes/
