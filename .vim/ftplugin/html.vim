@@ -1,5 +1,6 @@
 "
-" .html file type for html files
+" .html file type for soft 2 character tab.
 "
-set softtabstop=2
+set expandtab
+set tabstop=2
 set shiftwidth=2
