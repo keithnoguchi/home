@@ -1,12 +1,31 @@
 #!/bin/sh
 
-WPA_HOME=/etc/wpa_supplicant
-IF_NAME=wlp3s0
-NEW_CONF=$WPA_HOME/${1}.conf
-WPA_CONF=$WPA_HOME/wpa_supplicant-$IF_NAME.conf
+usage() { printf "wifi name [ifname]" >&2; exit 1; }
+error()
+{
+	local msg=${1:-"Someting wrong"}
+	local ret=${2:-1}
+	printf "%s\n" "$msg"
+	exit $ret
+}
+
+## arguments
+case $# in
+	[0-2]) ;; # we take either 0, 1, or 2 options
+	*) usage ;;
+esac
+network=${1:-home}
+ifname=${2:-wlp3s0}
+
+## network variable validity check
+home=/etc/wpa_supplicant
+NEW_CONF=$home/${network}.conf
+[ ! -f "$NEW_CONF" ] && error "No such file: $NEW_CONF"
+
+WPA_CONF=$home/wpa_supplicant-$ifname.conf
 RSV_CONF=/etc/resolv.conf
 RSV_SYSD=/run/systemd/resolve/resolv.conf
-SRV_CMD="systemctl restart wpa_supplicant@$IF_NAME"
+SRV_CMD="systemctl restart wpa_supplicant@$ifname"
 NET_CMD="systemctl restart systemd-networkd"
 
 x=sudo
