@@ -1,5 +1,13 @@
 #!/bin/sh
 
+## command line arguments
+case $# in
+	[0-2]) ;; # we take either 0, 1, or 2 options
+	*) usage ;;
+esac
+network=${1:-home}
+ifname=${2:-wlp3s0}
+
 usage() { printf "wifi name [ifname]" >&2; exit 1; }
 error()
 {
@@ -9,41 +17,24 @@ error()
 	exit $ret
 }
 
-## arguments
-case $# in
-	[0-2]) ;; # we take either 0, 1, or 2 options
-	*) usage ;;
-esac
-network=${1:-home}
-ifname=${2:-wlp3s0}
+restart()
+{
+	local ifname=$1
+	local wpa_src=/etc/wpa_supplicant/${2}.conf
+	local wpa_dst=/etc/wpa_supplicant/wpa_supplicant-$ifname.conf
+	local resolv_src=/run/systemd/resolve/resolv.conf
+	local resolv_dst=/etc/resolv.conf
 
-## network variable validity check
-home=/etc/wpa_supplicant
-NEW_CONF=$home/${network}.conf
-[ ! -f "$NEW_CONF" ] && error "No such file: $NEW_CONF"
+	# wpa configuration file sanity check.
+	[ ! -f "$wpa_src" ] && error "No such file: $wpa_src"
 
-WPA_CONF=$home/wpa_supplicant-$ifname.conf
-RSV_CONF=/etc/resolv.conf
-RSV_SYSD=/run/systemd/resolve/resolv.conf
-SRV_CMD="systemctl restart wpa_supplicant@$ifname"
-NET_CMD="systemctl restart systemd-networkd"
+	[ -f "$wpa_dst" ] && sudo rm $wpa_dst
+	sudo ln -s $wpa_src $wpa_dst
+	[ -a "$resolv_dst" -o -h "$resolv_dst" ] && sudo rm $resolv_dst
+	sudo ln -s $resolv_src $resolv_dst
 
-x=sudo
+	sudo systemctl restart wpa_supplicant@${ifname}
+	sudo systemctl restart systemd-networkd
+}
 
-if [ ! -f "$NEW_CONF" ]; then
-	printf "No such file: $NEW_CONF\n"
-	exit 1
-fi
-
-if [ -f "$WPA_CONF" ]; then
-	$x rm $WPA_CONF
-fi
-
-if [ -a "$RSV_CONF" -o -h "$RSV_CONF" ]; then
-	$x rm $RSV_CONF
-fi
-
-$x ln -s $NEW_CONF $WPA_CONF
-$x ln -s $RSV_SYSD $RSV_CONF
-$x $SRV_CMD
-$x $NET_CMD
+restart "$ifname" "$network"
