@@ -3,10 +3,10 @@ export PS1='\h\$ '
 export EDITOR=vim
 export TERM=xterm-color
 
-# Aliases
-alias p=parallel
-alias play=ansible-playbook
-alias tf=terraform
+# Same aliases through functions.
+unalias -a
+play() { ansible-playbook "$@"; }
+tf() { terraform "$@"; }
 
 # For Golang
 export GOROOT=$HOME/git/go
