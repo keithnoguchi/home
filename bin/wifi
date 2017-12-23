@@ -2,7 +2,7 @@
 
 ## Metadata
 progname=${0##*/}
-description="Configure WiFi with systemd/wpa_supplicant"
+description="Configure WiFi networks with systemd/wpa_supplicant"
 usage="$progname WIFINAME"
 data_of_creation=2017-12-22
 version=1.0
@@ -23,8 +23,14 @@ die()
 
 usage()
 {
-	printf "%s - %s\n\n" "$progname" "$description"
+	printf "%s - %s\n" "$progname" "$description"
 	printf "USAGE: %s\n" "$usage"
+}
+
+version()
+{
+	printf "%s version %s\n" "$progname" "$version"
+	printf "by %s, %d\n" "$author" "${data_of_creation%%-*}"
 }
 
 restart()
@@ -48,6 +54,15 @@ restart()
 }
 
 ## command line arguments
+while getopts hv arg
+do
+	case $arg in
+		h) usage; exit ;;
+		v) version; exit ;;
+	esac
+done
+shift $(( $OPTIND - 1 ))
+
 case $# in
 	[0-2]) ;; # we take either 0, 1, or 2 options
 	*)
