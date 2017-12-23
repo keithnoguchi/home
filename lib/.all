@@ -1,0 +1,15 @@
+# vi:filetype=sh
+
+_load()
+{
+	local pwd="$HOME/lib"
+	local func
+
+	for func
+	do
+		. "$pwd/$func"
+	done
+}
+
+## Load shell functions
+_load play tf menu l

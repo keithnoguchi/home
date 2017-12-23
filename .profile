@@ -1,12 +1,10 @@
+# Load shell functions
+source ~/lib/.all
+
 # Default settings
 export PS1='\h\$ '
 export EDITOR=vim
 export TERM=xterm-color
-
-# Same aliases through functions.
-unalias -a
-play() { ansible-playbook "$@"; }
-tf() { terraform "$@"; }
 
 # For Golang
 export GOROOT=$HOME/git/go

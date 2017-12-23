@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## play plays ansible playbook.
+play() { ansible-playbook "$@"; }

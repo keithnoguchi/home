@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## tf runs terraform command.
+tf() { terraform "$@"; }

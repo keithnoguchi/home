@@ -1,20 +1,6 @@
-#!/bin/sh
+# vi:filttype=sh
 
-## Global variables
-progname=${0##*/}
-
-main()
-{
-	if [ $# -lt 1 ]
-	then
-		usage
-	else
-		menu "$@"
-	fi
-}
-
-usage() { printf "USAGE: $progname cmd [cmd...]\n"; exit 1; }
-
+## menu shows command line arguments in a menu format.
 menu()
 {
 	local IFS=$' \t\n'
@@ -58,6 +44,3 @@ menu()
 		return 1
 	fi
 }
-
-## Call main function
-main "$@"
