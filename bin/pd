@@ -1,0 +1,10 @@
+#!/bin/sh
+
+pd()
+{
+	local error
+	popd "$@" >/dev/null # suppress the popd stdout
+	error=$?
+	echo $PWD
+	return $error
+}

@@ -1,0 +1,33 @@
+#!/bin/sh
+
+cd()
+{
+	local dir error
+
+	# Ignore all the command line options
+	while :
+	do
+		case $1 in
+			--) break ;;
+			-*) shift ;;
+			*) break ;;
+		esac
+	done
+
+	dir=$1
+
+	if [ -n "$dir" ]
+	then
+		pushd "$dir"
+	else
+		pushd "$HOME"
+	fi 2>/dev/null
+
+	error=$? ## store pushd's exit code
+
+	if [ $error -ne 0 ]
+	then
+		builtin cd "$dir" ## let the builtin do the job
+	fi
+	return "$error"
+} >/dev/null
