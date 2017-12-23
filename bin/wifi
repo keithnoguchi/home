@@ -1,20 +1,30 @@
 #!/bin/sh
 
-## command line arguments
-case $# in
-	[0-2]) ;; # we take either 0, 1, or 2 options
-	*) usage ;;
-esac
+## Metadata
+progname=${0##*/}
+description="Configure WiFi with systemd/wpa_supplicant"
+usage="$progname WIFINAME"
+data_of_creation=2017-12-22
+version=1.0
+author="Kei Nohguchi"
+
+## Default variable
 network=${1:-home}
 ifname=${2:-wlp3s0}
 
-usage() { printf "wifi name [ifname]" >&2; exit 1; }
-error()
+## Functions
+die()
 {
-	local msg=${1:-"Someting wrong"}
-	local ret=${2:-1}
-	printf "%s\n" "$msg"
-	exit $ret
+	error=$1
+	shift
+	[ -n "$*" ] && printf "%s\n" "$*" >&2
+	exit "$error"
+}
+
+usage()
+{
+	printf "%s - %s\n\n" "$progname" "$description"
+	printf "USAGE: %s\n" "$usage"
 }
 
 restart()
@@ -26,7 +36,7 @@ restart()
 	local resolv_dst=/etc/resolv.conf
 
 	# wpa configuration file sanity check.
-	[ ! -f "$wpa_src" ] && error "No such file: $wpa_src"
+	[ ! -f "$wpa_src" ] && die 2 "No such file: $wpa_src"
 
 	[ -f "$wpa_dst" ] && sudo rm $wpa_dst
 	sudo ln -s $wpa_src $wpa_dst
@@ -37,4 +47,14 @@ restart()
 	sudo systemctl restart systemd-networkd
 }
 
+## command line arguments
+case $# in
+	[0-2]) ;; # we take either 0, 1, or 2 options
+	*)
+		usage
+		die 1
+		;;
+esac
+
+## Restart the network!
 restart "$ifname" "$network"
