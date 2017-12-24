@@ -30,12 +30,13 @@ fmt="$nocursor$topleft
 
 "
 
-# Functions
+# main start the fire.
 main()
 {
 	init
 }
 
+# init initializes the board.
 init()
 {
 	clear
@@ -44,6 +45,7 @@ init()
 	printf "\t%s\n" "$description" "by $author, ${created%%-*}" ""
 }
 
+# print_board prints the board on the screen.
 print_board()
 {
 	printf "$fmt" "${board[@]}"
@@ -59,5 +61,5 @@ borders()
 	[ $x -lt 3 ] && bordering[$D]=$(( $empty + 1 ))
 }
 
-# Main loop
+# Light the fire!
 main "$@"
