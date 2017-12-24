@@ -31,6 +31,19 @@ fmt="$nocursor$topleft
 "
 
 # Functions
+main()
+{
+	init
+}
+
+init()
+{
+	clear
+	print_board
+	echo
+	printf "\t%s\n" "$description" "by $author, ${created%%-*}" ""
+}
+
 print_board()
 {
 	printf "$fmt" "${board[@]}"
@@ -44,19 +57,6 @@ borders()
 	[ $y -gt 0 ] && bordering[$B]=$(( $empty - 4 ))
 	[ $x -gt 0 ] && bordering[$C]=$(( $empty - 1 ))
 	[ $x -lt 3 ] && bordering[$D]=$(( $empty + 1 ))
-}
-
-init()
-{
-	clear
-	print_board
-	echo
-	printf "\t%s\n" "$description" "by $author, ${created%%-*}" ""
-}
-
-main()
-{
-	init
 }
 
 # Main loop
