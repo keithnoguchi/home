@@ -34,6 +34,22 @@ fmt="$nocursor$topleft
 main()
 {
 	init
+	while :
+	do
+		borders
+		print_board
+		printf "\t   %d move" "$moves"
+		[ $moves -gt 1 ] && printf "s"
+
+		read -sn1 -p $'      \e[K' key
+		case $key in
+			A) [ -n "${bordering[$A]}" ] && move "${bordering[$A]}" ;;
+			B) [ -n "${bordering[$B]}" ] && move "${bordering[$B]}" ;;
+			C) [ -n "${bordering[$C]}" ] && move "${bordering[$C]}" ;;
+			D) [ -n "${bordering[$D]}" ] && move "${bordering[$D]}" ;;
+			q|Q) echo; break ;;
+		esac
+	done
 }
 
 # init initializes the board.
@@ -54,6 +70,7 @@ as possible.
 
 Press \e[1mENTER\e[0m to continue
 "
+	shuffle
 	moves=0
 	read -s
 	clear
@@ -63,6 +80,41 @@ Press \e[1mENTER\e[0m to continue
 print_board()
 {
 	printf "$fmt" "${board[@]}"
+}
+
+# shuffle shuffles the board.
+shuffle()
+{
+	local n=0 max=$(( $RANDOM % 100 + 150 ))
+	while [ $(( n += 1 )) -lt $max ]
+	do
+		borders
+		random_move "${bordering[@]}"
+	done
+}
+
+# random_move moves pieces randomly.
+random_move()
+{
+	local sq
+	while :
+	do
+		sq=$(( $RANDOM % $# + 1 ))
+		sq=${!sq}
+		[ $sq -ne ${last:-666} ] && break
+	done
+	move "$sq"
+}
+
+# move moves the piece
+move()
+{
+	movelist="$empty $movelist"
+	moves=$(( $moves + 1 ))
+	board[$empty]=${board[$1]}
+	board[$1]=""
+	last=$empty
+	empty=$1
 }
 
 borders()
