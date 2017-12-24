@@ -40,6 +40,7 @@ main()
 		print_board
 		printf "\t   %d move" "$moves"
 		[ $moves -gt 1 ] && printf "s"
+		check
 
 		read -sn1 -p $'      \e[K' key
 		case $key in
@@ -80,6 +81,17 @@ Press \e[1mENTER\e[0m to continue
 print_board()
 {
 	printf "$fmt" "${board[@]}"
+}
+
+# check checks the board and exit if it's finished.
+check()
+{
+	if [ "${board[*]}" = "${target[*]}" ]
+	then
+		print_board
+		printf "\a\tCompleted in %d moves\n\n" "$moves"
+		exit
+	fi
 }
 
 # shuffle shuffles the board.
