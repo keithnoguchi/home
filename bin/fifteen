@@ -41,8 +41,22 @@ init()
 {
 	clear
 	print_board
+	printf "%s\n" "$description" "by $author, ${created%%-*}" ""
 	echo
-	printf "\t%s\n" "$description" "by $author, ${created%%-*}" ""
+	printf "
+Use the cursor keys to move the tiles around.
+
+The game is finished when you return to the
+position shown above.
+
+Try to complete the puzzle in as few moves
+as possible.
+
+Press \e[1mENTER\e[0m to continue
+"
+	moves=0
+	read -s
+	clear
 }
 
 # print_board prints the board on the screen.
