@@ -1,0 +1,63 @@
+#!/bin/sh
+# vi:filetype=sh
+
+# Metadata
+progname=${0##*/}
+description="The Fifteen Puzzle"
+author="Kei Nohguchi"
+created="2017-12-23"
+
+# Variables
+board=( {1..15} "" )
+target=( "${board[@]}" )
+empty=15
+last=0
+A=0 B=1 C=2 D=3
+topleft='\e[0;0H'
+nocursor='\e[?25l'
+normal='\e[0m\e[?12l\e[?25h'
+
+# Board layout
+fmt="$nocursor$topleft
+
+    %2s  %2s  %2s  %2s
+
+    %2s  %2s  %2s  %2s
+
+    %2s  %2s  %2s  %2s
+
+    %2s  %2s  %2s  %2s
+
+"
+
+# Functions
+print_board()
+{
+	printf "$fmt" "${board[@]}"
+}
+
+borders()
+{
+	local x=$(( ${empty:=0} % 4 )) y=$(( $empty / 4 ))
+	unset bordering
+	[ $y -lt 3 ] && bordering[$A]=$(( $empty + 4 ))
+	[ $y -gt 0 ] && bordering[$B]=$(( $empty - 4 ))
+	[ $x -gt 0 ] && bordering[$C]=$(( $empty - 1 ))
+	[ $x -lt 3 ] && bordering[$D]=$(( $empty + 1 ))
+}
+
+init()
+{
+	clear
+	print_board
+	echo
+	printf "\t%s\n" "$description" "by $author, ${created%%-*}" ""
+}
+
+main()
+{
+	init
+}
+
+# Main loop
+main "$@"
