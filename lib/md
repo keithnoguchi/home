@@ -1,0 +1,9 @@
+# vi:filetype=sh
+
+md()
+{
+	case $1 in
+		-c) mkdir -p "$2" && cd "$2" ;;
+		*) mkdir -p "$@" ;;
+	esac
+}
