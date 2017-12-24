@@ -1,0 +1,23 @@
+# vi:filetype=sh
+
+pr1()
+{
+	case $1 in
+		-w)
+			pr_w=
+			shift
+			;;
+		-W)
+			pr_w=${2}
+			shift 2
+			;;
+		-W*)
+			pr_w={1#??}
+			shift
+			;;
+		*)
+			pr_w=-.${COLUMNS:-80}
+			;;
+	esac
+	printf "%${pr_w}s\n" "$@"
+}
