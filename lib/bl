@@ -1,0 +1,24 @@
+brightness=${1:-10}
+# vi:filetype=sh
+
+bl()
+{
+	local path=/sys/class/backlight
+	local dev
+	local brightness=$1
+
+	# Lookup the sysfs device file.
+	if [ -d "$path/intel_backlight" ]; then
+		dev=$path/intel_backlight/brightness
+	elif [ -d "$path/acpi_video0" ]; then
+		dev=$path/acpi_video0/brightness
+	else
+		echo "can't find device" >&2
+		exit 1
+	fi
+
+	# Update the value.
+	local current=$(cat $dev)
+	brightness=$(( current + $brightness ))
+	sudo sh -c "echo $brightness > $dev"
+}
