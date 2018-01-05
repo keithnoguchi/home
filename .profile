@@ -11,6 +11,9 @@ export GOROOT=$HOME/git/go
 export GOPATH=$HOME
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+# For Ansible
+export ANSIBLE_NOCOWS=true
+
 # For Chef
 export CHEF_HOME=${HOME}/.chef
 export CHEF_USER=${USER}
