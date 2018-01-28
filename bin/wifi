@@ -51,6 +51,7 @@ restart()
 
 	sudo systemctl restart wpa_supplicant@${ifname}
 	sudo systemctl restart systemd-networkd
+	sudo systemctl restart systemd-resolved
 }
 
 ## command line arguments
