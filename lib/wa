@@ -1,0 +1,7 @@
+# vi:filetype=sh
+
+wa()
+{
+	# Run w/o title, every second, difference, color
+	watch -t -n1 -t -d -c "$@"
+}

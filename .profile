@@ -1,5 +1,5 @@
 # Load shell functions
-source ~/lib/.all
+source ~/lib/.config
 
 # Default settings
 export PS1='\h\$ '
