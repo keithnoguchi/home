@@ -7,6 +7,7 @@ export EDITOR=vim
 export TERM=xterm-color
 
 # For Golang
+export GOCACHE=off
 export GOROOT=$HOME/git/go
 export GOPATH=$HOME
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
