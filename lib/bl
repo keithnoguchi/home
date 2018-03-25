@@ -3,11 +3,11 @@ brightness=${1:-10}
 
 bl()
 {
-	local path=/sys/class/backlight
-	local dev
 	local brightness=$1
 
 	# Lookup the sysfs device file.
+	local path=/sys/class/backlight
+	local dev
 	if [ -d "$path/intel_backlight" ]; then
 		dev=$path/intel_backlight/brightness
 	elif [ -d "$path/acpi_video0" ]; then
