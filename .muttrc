@@ -12,5 +12,5 @@ source /usr/share/doc/mutt/samples/colors.default
 # SMTP settings
 set use_from = yes
 
-# Home specific
-source ~/.mutt/home.conf
+# Account specific
+source ~/.mutt/work.conf
