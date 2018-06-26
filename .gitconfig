@@ -1,8 +1,9 @@
 [alias]
-	br = branch
-	ci = commit
-	co = checkout
-	st = status
+	br  = branch
+	ci  = commit
+	co  = checkout
+	st  = status
+	sub = submodule
 [user]
 	name = Kei Nohguchi
 	email = kei@nohguchi.com
