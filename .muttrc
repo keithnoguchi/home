@@ -13,4 +13,4 @@ source /usr/share/doc/mutt/samples/colors.default
 set use_from = yes
 
 # Account specific
-source ~/.mutt/work.conf
+source ~/.mutt/home.conf
