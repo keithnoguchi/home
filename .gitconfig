@@ -5,6 +5,7 @@
 	st   = status
 	sub  = submodule
 	desc = describe
+	pick = cherry-pick
 [user]
 	name = Kei Nohguchi
 	email = kei@nohguchi.com
