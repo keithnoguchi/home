@@ -1,7 +1,11 @@
 [alias]
+	b    = branch
+	d    = diff
+	s    = status
 	br   = branch
 	ci   = commit
 	co   = checkout
+	sh   = show
 	st   = status
 	sub  = submodule
 	desc = describe
