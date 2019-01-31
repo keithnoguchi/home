@@ -6,6 +6,9 @@ export PS1='\h\$ '
 export EDITOR=vim
 export TERM=xterm-color
 
+# For Rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 # For Golang
 export GOCACHE=on
 export GOROOT=$HOME/git/go
