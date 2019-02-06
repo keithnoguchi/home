@@ -42,6 +42,18 @@ export KITCHEN_LOCAL_YAML=${HOME}/.kitchen/config.yml
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
 	ssh-agent > ~/.ssh-agent-thing
 fi
-if [[ "$SSH_AGENT_PID" == "" ]]; then
-	eval "$(<~/.ssh-agent-thing)"
+#if [[ "$SSH_AGENT_PID" == "" ]]; then
+#	eval "$(<~/.ssh-agent-thing)"
+#fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/src/google-cloud-sdk/path.bash.inc" ]; then
+	. "$HOME/src/google-cloud-sdk/path.bash.inc"
 fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/src/google-cloud-sdk/completion.bash.inc" ]; then
+	. "$HOME/src/google-cloud-sdk/completion.bash.inc"
+fi
+
+export LP_PROJECT_ROOT=$GOPATH/src/github.com/reality-lab-networks/
