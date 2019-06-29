@@ -10,7 +10,6 @@ export TERM=xterm-color
 export PATH=$HOME/.cargo/bin:$PATH
 
 # For Golang
-export GOCACHE=on
 export GOROOT=$HOME/git/go
 export GOPATH=$HOME
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
