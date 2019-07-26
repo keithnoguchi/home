@@ -13,7 +13,7 @@ source /usr/share/doc/mutt/samples/colors.default
 set use_from = yes
 
 # HTML emails
-alternative_order text/plain text/html
+alternative_order text/html text/plain
 auto_view text/html
 
 # Account specific
