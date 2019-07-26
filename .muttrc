@@ -12,5 +12,9 @@ source /usr/share/doc/mutt/samples/colors.default
 # SMTP settings
 set use_from = yes
 
+# HTML emails
+alternative_order text/plain text/html
+auto_view text/html
+
 # Account specific
-source ~/.mutt/work.conf
+source ~/.mutt/home.conf
