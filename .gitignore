@@ -8,8 +8,7 @@
 .surf/
 .mutt/
 .ssh/
-downloads/
-kernel/
+Downloads/
 tmp/
 git/
 pkg/
