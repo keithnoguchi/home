@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## s is the systemctl alias.
+s() { systemctl "$@"; }

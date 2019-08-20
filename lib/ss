@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## ss is the sudo systemctl alias.
+ss() { sudo systemctl "$@"; }
