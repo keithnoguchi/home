@@ -6,8 +6,8 @@ export PS1='\h\$ '
 export EDITOR=vim
 export TERM=xterm-color
 
-# For bcc
-export PATH=/usr/share/bcc/tools:$PATH
+# For bcc/bpftrace
+export PATH=/usr/share/bcc/tools:/usr/share/bpftrace/tools:$PATH
 
 # For Rust
 export PATH=$HOME/.cargo/bin:$PATH
