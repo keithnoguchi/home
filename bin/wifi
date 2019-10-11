@@ -79,7 +79,7 @@ case $# in
 esac
 
 case $1 in
-	stop)
+	off|stop)
 		stop "$ifname"
 		;;
 	*)
