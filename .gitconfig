@@ -11,11 +11,9 @@
 	desc = describe
 	pick = cherry-pick
 [user]
-	name = Kei Nohguchi
-	email = kei@nohguchi.com
+	name = Keith Noguchi
+	email = keith.noguchi@gmail.com
 [push]
 	default = simple
-[gitreview]
-	username = keinohguchi
 [url "git@github.com:"]
 	insteadOf = https://github.com/
