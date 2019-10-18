@@ -11,7 +11,7 @@ export PATH=/usr/share/bcc/tools:/usr/share/bpftrace/tools:$PATH
 
 # For Rust
 export PATH=$HOME/.cargo/bin:$PATH
-export RUST_BACKTRACE=full
+export RUST_BACKTRACE=0
 
 # For Golang
 export GOROOT=$HOME/git/go
