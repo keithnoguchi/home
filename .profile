@@ -8,6 +8,7 @@ source ~/.config/twitter.env
 export PS1='\h\$ '
 export EDITOR=vim
 export TERM=xterm-color
+export LC_CTYPE="en_US.UTF-8"
 
 # For bcc/bpftrace
 export PATH=/usr/share/bcc/tools:/usr/share/bpftrace/tools:$PATH
