@@ -1,6 +1,9 @@
 # Load shell functions
 source ~/lib/.config
 
+# Twitter oauth2 API environment variables
+source ~/.config/twitter.env
+
 # Default settings
 export PS1='\h\$ '
 export EDITOR=vim
