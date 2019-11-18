@@ -63,6 +63,10 @@ if [ -f "$HOME/src/google-cloud-sdk/completion.bash.inc" ]; then
 	. "$HOME/src/google-cloud-sdk/completion.bash.inc"
 fi
 
+# For GPG key for git signing
+# https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
+export GPG_TTY=$(tty)
+
 export AMQP_SCHEME=amqp
 export AMQP_USERNAME=rabbit
 export AMQP_PASSWORD=RabbitMQ

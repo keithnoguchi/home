@@ -15,3 +15,5 @@
 	email = keith.noguchi@gmail.com
 [push]
 	default = simple
+[include]
+	path = ~/.gnupg/secret.txt
