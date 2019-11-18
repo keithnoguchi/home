@@ -1,4 +1,4 @@
 # vi:filetype=sh
 
-## j is the journalctl alias
+## c is the cargo alias
 c() { cargo "$@"; }

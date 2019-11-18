@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## k is the kubectl alias
+k() { kubectl "$@"; }
