@@ -63,7 +63,6 @@ if [ -f "$HOME/src/google-cloud-sdk/completion.bash.inc" ]; then
 	. "$HOME/src/google-cloud-sdk/completion.bash.inc"
 fi
 
-export LP_PROJECT_ROOT=$GOPATH/src/github.com/reality-lab-networks/
 export AMQP_SCHEME=amqp
 export AMQP_USERNAME=rabbit
 export AMQP_PASSWORD=RabbitMQ
