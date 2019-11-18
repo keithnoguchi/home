@@ -64,3 +64,8 @@ if [ -f "$HOME/src/google-cloud-sdk/completion.bash.inc" ]; then
 fi
 
 export LP_PROJECT_ROOT=$GOPATH/src/github.com/reality-lab-networks/
+export AMQP_SCHEME=amqp
+export AMQP_USERNAME=rabbit
+export AMQP_PASSWORD=RabbitMQ
+export AMQP_CLUSTER=localhost:5672
+export AMQP_VHOST=hole
