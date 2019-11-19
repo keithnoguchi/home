@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## g is the gcloud alias
+g() { gcloud "$@"; }
