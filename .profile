@@ -70,5 +70,5 @@ export GPG_TTY=$(tty)
 export AMQP_SCHEME=amqp
 export AMQP_USERNAME=rabbit
 export AMQP_PASSWORD=RabbitMQ
-export AMQP_CLUSTER=localhost:5672
-export AMQP_VHOST=hole
+export AMQP_CLUSTER=127.0.0.1:5672
+export AMQP_VHOST=mx
