@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## r is the rustc alias
+r() { rustc "$@"; }
