@@ -4,6 +4,9 @@ source ~/lib/.config
 # Twitter oauth2 API environment variables
 source ~/.config/twitter.env
 
+# Linkerd
+export PATH=$HOME/.linkerd2/bin:$PATH
+
 # Default settings
 export PS1='\h\$ '
 export EDITOR=vim

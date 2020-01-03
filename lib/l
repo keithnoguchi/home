@@ -1,4 +1,6 @@
 # vi:filetype=sh
 
 ## l lists files in long format, piped through less.
-l() { ls -lA "$@" | less; }
+l() {
+	linkerd "$@"
+}
