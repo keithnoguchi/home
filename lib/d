@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## d as in docker
+d() { docker "$@"; }
