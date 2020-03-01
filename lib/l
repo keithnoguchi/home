@@ -1,6 +1,6 @@
 # vi:filetype=sh
 
-## l lists files in long format, piped through less.
+## l as in linkerd
 l() {
 	linkerd "$@"
 }
