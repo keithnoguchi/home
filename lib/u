@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## u is the rustup alias
+u() { rustup "$@"; }
