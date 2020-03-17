@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## h is for helm
+h() { helm "$@"; }
