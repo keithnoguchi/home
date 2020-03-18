@@ -1,0 +1,6 @@
+# vi:filetype=sh
+
+## x as in kubectx
+x() {
+	kubectx "$@"
+}
