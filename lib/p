@@ -1,0 +1,6 @@
+# vi:filetype=sh
+
+## p as in ansible-playbook
+p() {
+	ansible-playbook "$@"
+}
