@@ -25,6 +25,9 @@ export GOROOT=$HOME/git/go
 export GOPATH=$HOME
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+# Java
+export JAVA_HOME=/usr/lib/jvm/default
+
 # For node/yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/node_modules/.bin"
 
