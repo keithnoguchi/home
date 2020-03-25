@@ -1,0 +1,6 @@
+# vi:filetype=sh
+
+## t as in tendermint
+t() {
+	tendermint "$@"
+}
