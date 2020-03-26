@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## o is the openssl alias.
+o() { openssl "$@"; }
