@@ -1,10 +1,8 @@
 [alias]
-	b    = branch
-	d    = diff
-	s    = status
 	br   = branch
 	ci   = commit
 	co   = checkout
+	rb   = rebase
 	sh   = show
 	st   = status
 	sub  = submodule
