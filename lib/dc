@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## dc as docker-compose
+dc() { docker-compose "$@"; }
