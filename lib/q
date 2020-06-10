@@ -1,0 +1,6 @@
+# vi:filetype=sh
+
+## q as in psql
+q() {
+	psql "$@"
+}
