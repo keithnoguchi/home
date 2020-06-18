@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## b for redis-benchmark
+b() { redis-benchmark "$@"; }
