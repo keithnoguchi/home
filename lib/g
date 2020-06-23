@@ -1,4 +1,4 @@
 # vi:filetype=sh
 
-## g is for golang
-g() { go "$@"; }
+## g for ansible-galaxy
+g() { ansible-galaxy "$@"; }
