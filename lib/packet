@@ -1,0 +1,6 @@
+# vi:filetype=sh
+
+## packet as in packet-cli
+packet() {
+	packet-cli "$@"
+}
