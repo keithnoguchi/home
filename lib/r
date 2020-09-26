@@ -1,4 +1,2 @@
 # vi:filetype=sh
-
-## r for redis-cli
-r() { redis-cli "$@"; }
+r() { rails "$@"; }
