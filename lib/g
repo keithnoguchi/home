@@ -1,4 +1,4 @@
 # vi:filetype=sh
 
-## g for ansible-galaxy
-g() { ansible-galaxy "$@"; }
+## g for git
+g() { git "$@"; }
