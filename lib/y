@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## y for yarn
+y() { yarn "$@"; }
