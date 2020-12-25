@@ -1,0 +1,6 @@
+# vi:filetype=sh
+
+## e as in ed
+e() {
+	ed "$@"
+}
