@@ -8,7 +8,7 @@ source ~/.config/twitter.env
 export PATH=$HOME/.linkerd2/bin:$PATH
 
 # Default settings
-export PS1='\h\$ '
+export PS1='\$ '
 export EDITOR=vim
 export TERM=xterm-color
 export LC_CTYPE="en_US.UTF-8"
