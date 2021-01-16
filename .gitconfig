@@ -1,12 +1,15 @@
 [alias]
-	br = branch
-	ci = commit
-	co = checkout
-	fe = fetch
-	re = rebase
-	st = status
-	su = submodule
-	pi = cherry-pick
+	a    = add
+	b    = branch
+	ci   = commit
+	co   = checkout
+	d    = diff
+	f    = fetch
+	l    = log
+	r    = rebase
+	s    = status
+	sub  = submodule
+	pick = cherry-pick
 [user]
 	name = Keith Noguchi
 	email = keith.noguchi@gmail.com
