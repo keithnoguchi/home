@@ -8,6 +8,7 @@
 	l    = log
 	r    = rebase
 	s    = status
+	st   = stash
 	sub  = submodule
 	pick = cherry-pick
 [user]
