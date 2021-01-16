@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## k is the kubens alias
+kn() { kubens "$@"; }

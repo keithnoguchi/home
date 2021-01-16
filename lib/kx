@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## kx is the kubectx alias
+kx() { kubectx "$@"; }
