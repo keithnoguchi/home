@@ -1,6 +1,6 @@
 # vi:filetype=sh
 
-## l as in linkerd
+## l as in lokoctl
 l() {
-	linkerd "$@"
+	lokoctl "$@"
 }
