@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## v for vim
+v() { vim "$@"; }
