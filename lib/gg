@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## gg for ginkgo
+gg() { ginkgo "$@"; }
