@@ -1,6 +1,6 @@
 # vi:filetype=sh
 
-## n as in kubens
+## n as in node
 n() {
-	kubens "$@"
+	node "$@"
 }
