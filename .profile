@@ -16,23 +16,26 @@ export EDITOR=vim
 export TERM=xterm-color
 export LC_CTYPE="en_US.UTF-8"
 
-# For bcc/bpftrace
+# bcc/bpftrace
 export PATH=/usr/share/bcc/tools:/usr/share/bpftrace/tools:$PATH
 
-# For Rust
+# Rust
 export PATH=$HOME/.cargo/bin:$PATH
 export RUST_BACKTRACE=0
 
-# For Golang
+# Golang
 export GOROOT=$HOME/git/go
 export GOPATH=$HOME
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-# Java
-export JAVA_HOME=/usr/lib/jvm/default
+# Ruby
+export PATH=$HOME/.local/share/gem/ruby/2.7.0/bin:$PATH
 
 # For node/yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/node_modules/.bin"
+
+# Java
+export JAVA_HOME=/usr/lib/jvm/default
 
 # For Ansible
 export ANSIBLE_NOCOWS=true
