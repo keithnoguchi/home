@@ -1,6 +1,6 @@
 # vi:filetype=sh
 
-## l as in lokoctl
+## l for lua
 l() {
-	lokoctl "$@"
+	lua "$@"
 }
