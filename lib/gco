@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## gco for git checkout
+gco() { git checkout "$@"; }
