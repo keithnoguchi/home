@@ -7,9 +7,6 @@ source ~/.kubectl_aliases
 # Twitter oauth2 API environment variables
 source ~/.config/twitter.env
 
-# Linkerd
-export PATH=$HOME/.linkerd2/bin:$PATH
-
 # Default settings
 export PS1='\$ '
 export EDITOR=vim
@@ -17,10 +14,11 @@ export TERM=xterm-color
 export LC_CTYPE="en_US.UTF-8"
 
 # bcc/bpftrace
-export PATH=/usr/share/bcc/tools:/usr/share/bpftrace/tools:$PATH
+export PATH=$PATH:/usr/share/bcc/tools
+export PATH=$PATH:/usr/share/bpftrace/tools
 
 # Rust
-export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$PATH:$HOME/.cargo/bin
 export RUST_BACKTRACE=0
 
 # Golang
@@ -28,31 +26,22 @@ export GOROOT=$HOME/git/go
 export GOPATH=$HOME
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-# Ruby
-export PATH=$HOME/.local/share/gem/ruby/2.7.0/bin:$PATH
+# JavaScript
+export PATH=$PATH:$HOME/.yarn/bin
+export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
+export PATH=$PATH:$HOME/node_modules/.bin
 
-# For node/yarn
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:$HOME/node_modules/.bin"
+# Python
+export PATH=$PATH:$HOME/.local/bin
+
+# Ruby
+export PATH=$PATH:$HOME/.local/share/gem/ruby/2.7.0/bin
 
 # Java
 export JAVA_HOME=/usr/lib/jvm/default
 
 # For Ansible
 export ANSIBLE_NOCOWS=true
-
-# For Chef
-export CHEF_HOME=${HOME}/.chef
-export CHEF_USER=${USER}
-export CHEF_VALIDATOR=nohguchi-validator
-export CHEF_SERVER=https://chef0/organizations/nohguchi
-export CHEF_CLIENT_KEY=${CHEF_HOME}/${CHEF_USER}.pem
-export CHEF_VALIDATION_KEY=${CHEF_HOME}/${CHEF_VALIDATOR}.pem
-export CHEF_CACHE_TYPE=BasicFile
-export CHEF_COOKBOOK_PATH=/usr/local/git/chef/cookbooks
-export CHEF_COOKBOOK_COPYRIGHT="Kei Nohguchi"
-
-# Chef/Kitchen related config.
-export KITCHEN_LOCAL_YAML=${HOME}/.kitchen/config.yml
 
 # cURL
 #export CURL_CA_BUNDLE=${HOME}/.curl/cacert.pem
@@ -77,9 +66,3 @@ fi
 # For GPG key for git signing
 # https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
 export GPG_TTY=$(tty)
-
-export AMQP_SCHEME=amqp
-export AMQP_USERNAME=rabbit
-export AMQP_PASSWORD=RabbitMQ
-export AMQP_CLUSTER=127.0.0.1:5672
-export AMQP_VHOST=mx
