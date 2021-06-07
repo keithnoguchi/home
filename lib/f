@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## f is the find alias
+f() { find "$@"; }
