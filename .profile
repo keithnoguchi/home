@@ -35,7 +35,7 @@ export PATH=$PATH:$HOME/node_modules/.bin
 export PATH=$PATH:$HOME/.local/bin
 
 # Ruby
-export PATH=$PATH:$HOME/.local/share/gem/ruby/2.7.0/bin
+export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
 
 # Java
 export JAVA_HOME=/usr/lib/jvm/default
