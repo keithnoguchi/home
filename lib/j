@@ -1,4 +1,4 @@
 # vi:filetype=sh
 
-## j is the journalctl alias
-j() { journalctl "$@"; }
+## j is the jobs alias
+j() { jobs "$@"; }
