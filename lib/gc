@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## gc for gcloud
+gc() { gcloud "$@"; }
