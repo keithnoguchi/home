@@ -16,7 +16,7 @@
 	pick = cherry-pick
 [user]
 	name = Keith Noguchi
-	email = keith.noguchi@gmail.com
+	email = keith@naturelust.co
 [push]
 	default = simple
 [include]
