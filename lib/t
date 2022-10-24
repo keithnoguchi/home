@@ -1,6 +1,6 @@
 # vi:filetype=sh
 
-## t as in tmux
+## t as in truffle
 t() {
-	tmux "$@"
+	truffle "$@"
 }

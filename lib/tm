@@ -1,0 +1,6 @@
+# vi:filetype=sh
+
+## tm as in tmux
+tm() {
+	tmux "$@"
+}
