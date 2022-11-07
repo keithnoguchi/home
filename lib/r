@@ -1,2 +1,2 @@
 # vi:filetype=sh
-r() { rails "$@"; }
+r() { create-react-app --template typescript "$@"; }
