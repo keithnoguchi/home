@@ -1,4 +1,4 @@
 # vi:filetype=sh
 
-## a is the anchor alias
+## a as in anchor
 a() { anchor "$@"; }
