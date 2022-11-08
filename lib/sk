@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## sk as in solana-keygen
+sk() { solana-keygen "$@"; }
