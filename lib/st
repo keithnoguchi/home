@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## sk as in spl-token
+st() { spl-token "$@"; }
