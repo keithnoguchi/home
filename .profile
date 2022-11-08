@@ -21,15 +21,19 @@ export PATH=$PATH:/usr/share/bpftrace/tools
 export PATH=$PATH:$HOME/.cargo/bin
 export RUST_BACKTRACE=0
 
-# Golang
-export GOROOT=$HOME/git/go
-export GOPATH=$HOME
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+# Solana
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
 # JavaScript
 export PATH=$PATH:$HOME/.yarn/bin
 export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
 export PATH=$PATH:$HOME/node_modules/.bin
+
+
+# Golang
+export GOROOT=$HOME/git/go
+export GOPATH=$HOME
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Python
 export PATH=$PATH:$HOME/.local/bin
