@@ -1,6 +1,6 @@
 # vi:filetype=sh
 
-## p as in ansible-playbook
+## p as in python
 p() {
-	ansible-playbook "$@"
+	python "$@"
 }
