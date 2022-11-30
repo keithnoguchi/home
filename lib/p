@@ -2,5 +2,5 @@
 
 ## p as in python
 p() {
-	python "$@"
+	python -q "$@"
 }
