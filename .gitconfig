@@ -16,7 +16,7 @@
 	pick = cherry-pick
 [user]
 	name = Keith Noguchi
-	email = hack@noguchi.us
+	email = keith@noguchi.us
 [push]
 	default = simple
 [include]
