@@ -13,36 +13,32 @@ export EDITOR=vim
 export TERM=xterm-color
 export LC_CTYPE="en_US.UTF-8"
 
-# bcc/bpftrace
-export PATH=$PATH:/usr/share/bcc/tools
-export PATH=$PATH:/usr/share/bpftrace/tools
-
 # Rust
-export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$HOME/.cargo/bin:$PATH
 export RUST_BACKTRACE=0
 
 # Solana
-export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH=$PATH:$HOME/.local/share/solana/install/active_release/bin
 
 # JavaScript
 export PATH=$PATH:$HOME/.yarn/bin
 export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
 export PATH=$PATH:$HOME/node_modules/.bin
 
+# Python
+export PATH=$PATH:$HOME/.local/bin
+
+# bcc/bpftrace
+export PATH=$PATH:/usr/share/bcc/tools
+export PATH=$PATH:/usr/share/bpftrace/tools
 
 # Golang
 export GOROOT=$HOME/git/go
 export GOPATH=$HOME
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-# Python
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 # Ruby
 export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
-
-# Java
-export JAVA_HOME=/usr/lib/jvm/default
 
 # For Ansible
 export ANSIBLE_NOCOWS=true
