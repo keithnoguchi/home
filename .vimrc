@@ -29,3 +29,6 @@ filetype plugin indent on
 
 " for js handlebars
 au BufNewFile,BufRead *.hbs set filetype=html
+
+" svelte
+set rtp+=~/git/vim-svelte-plugin
