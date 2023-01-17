@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## stv as solana-test-validator
+stv() { solana-test-validator "$@"; }

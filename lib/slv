@@ -1,4 +1,0 @@
-# vi:filetype=sh
-
-## slv as solana-local-validator
-slv() { solana-local-validator "$@"; }
