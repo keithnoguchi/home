@@ -13,12 +13,12 @@ export EDITOR=vim
 export TERM=xterm-color
 export LC_CTYPE="en_US.UTF-8"
 
-# Rust
-export PATH=$HOME/.cargo/bin:$PATH
-export RUST_BACKTRACE=0
-
 # Solana
-export PATH=$PATH:$HOME/.local/share/solana/install/active_release/bin
+export PATH=$HOME/.local/share/solana/install/active_release/bin:$PATH
+
+# Rust
+export PATH=$PATH:$HOME/.cargo/bin
+export RUST_BACKTRACE=0
 
 # JavaScript
 export PATH=$PATH:$HOME/.yarn/bin
