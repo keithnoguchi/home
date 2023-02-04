@@ -4,9 +4,6 @@ source ~/lib/.config
 # https://github.com/ahmetb/kubectl-aliases
 source ~/.kubectl_aliases
 
-# Twitter oauth2 API environment variables
-source ~/.config/twitter.env
-
 # Default settings
 export PS1='\$ '
 export EDITOR=vim
