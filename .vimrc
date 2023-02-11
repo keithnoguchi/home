@@ -27,8 +27,5 @@ map Q gq
 " file type plugins
 filetype plugin indent on
 
-" for js handlebars
-au BufNewFile,BufRead *.hbs set filetype=html
-
-" svelte
-set rtp+=~/git/vim-svelte-plugin
+" For ~/.vim/pack/plugins/start
+packloadall
