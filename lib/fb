@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## fb is the firebase, not fb :), alias
+fb() { firebase "$@"; }
