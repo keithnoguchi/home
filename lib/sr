@@ -1,4 +1,4 @@
 # vi:filetype=sh
 
-## sor as in soroban
-sor() { soroban "$@"; }
+## sr as in soroban
+sr() { soroban "$@"; }
