@@ -1,6 +1,6 @@
 # vi:filetype=sh
 
-## p as in python
+## p as in psql
 p() {
-	python -q "$@"
+	psql -q "$@"
 }
