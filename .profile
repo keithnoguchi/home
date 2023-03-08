@@ -48,7 +48,6 @@ if ! pgrep -u "$USER" ssh-agent >/dev/null; then
 	ssh-agent > ~/.ssh-agent-thing
 fi
 eval $(ssh-agent)
-ssh-add ~/.ssh/id_rsa 2>/dev/null
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/src/google-cloud-sdk/path.bash.inc" ]; then
