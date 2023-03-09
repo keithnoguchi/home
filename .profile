@@ -22,6 +22,10 @@ export PATH=$PATH:$HOME/.yarn/bin
 export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
 export PATH=$PATH:$HOME/node_modules/.bin
 
+# Postgres local development
+export PGHOST=127.0.0.1
+export PGUSER=postgres
+
 # Python
 export PATH=$PATH:$HOME/.local/bin
 
