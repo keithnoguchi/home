@@ -66,3 +66,7 @@ fi
 # For GPG key for git signing
 # https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
 export GPG_TTY=$(tty)
+
+PGHOST=localhost
+PGPORT=5432
+PGUSER=postgres
