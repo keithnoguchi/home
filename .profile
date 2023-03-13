@@ -68,5 +68,5 @@ fi
 export GPG_TTY=$(tty)
 
 PGHOST=localhost
-PGPORT=5432
+PGPORT=16000
 PGUSER=postgres
