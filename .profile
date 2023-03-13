@@ -67,6 +67,6 @@ fi
 # https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
 export GPG_TTY=$(tty)
 
-PGHOST=localhost
-PGPORT=16000
-PGUSER=postgres
+export PGHOST=localhost
+export PGPORT=16000
+export PGUSER=postgres
