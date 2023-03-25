@@ -1,4 +1,4 @@
 # vi:filetype=sh
 
-## j is for journalctl
-j() { journalctl "$@"; }
+## j is for jobs
+j() { jobs "$@"; }
