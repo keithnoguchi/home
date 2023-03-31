@@ -34,9 +34,8 @@ export PATH=$PATH:/usr/share/bcc/tools
 export PATH=$PATH:/usr/share/bpftrace/tools
 
 # Golang
-export GOROOT=$HOME/git/go
 export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
 
 # Ruby
 export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
