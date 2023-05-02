@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## ska as in skaffold
+ska() { skaffold "$@"; }
