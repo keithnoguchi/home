@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## ki as in kind
+ki() { kind "$@"; }

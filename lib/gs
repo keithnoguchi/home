@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## gs for gsutil
+gs() { gsutil "$@"; }
