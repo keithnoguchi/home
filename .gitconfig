@@ -9,6 +9,7 @@
 	i    = init
 	l    = log
 	m    = mv
+	p    = push
 	r    = rebase
 	s    = status
 	st   = stash
