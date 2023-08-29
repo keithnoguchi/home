@@ -1,0 +1,2 @@
+# vi:filetype=sh
+btc() { bluetoothctl "$@"; }
