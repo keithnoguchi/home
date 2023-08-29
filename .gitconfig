@@ -11,7 +11,7 @@
 	m    = mv
 	p    = push
 	r    = rebase
-	s    = status
+	ls   = status
 	st   = stash
 	sub  = submodule
 	pick = cherry-pick
@@ -26,3 +26,5 @@
 	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
+[url "git@github.com:cloudwan"]
+	insteadOf = "https://github.com/cloudwan"
