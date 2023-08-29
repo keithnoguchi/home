@@ -10,7 +10,7 @@ author="Kei Nohguchi"
 
 ## Default variable
 network=${1:-home}
-ifname=${2:-wlp3s0}
+ifname=${2:-wlan0}
 
 ## Functions
 die()
