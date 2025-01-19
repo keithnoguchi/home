@@ -1,6 +1,7 @@
 .Xauthority
 .bash_history
-.lesshist
+.bash_sessions/
+.lesshst
 .viminfo
 .cache/
 .docker/
@@ -23,3 +24,4 @@ tmp/
 git/
 pkg/
 src/
+bin/gopls
