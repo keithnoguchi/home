@@ -22,6 +22,6 @@ wk.add({
 		{ "<leader>k", "<cmd>bdelete<cr>", desc = "Kill buffer" },
 		{ "<leader>p", "<cmd>Lazy<cr>", desc = "Plugin Manager" },
 		{ "<leader>q", "<cmd>q<cr>", desc = "Quit" },
-		{ "<leader>w", "<cmd>w<cr>", desc = "Write" },
+		{ "<leader>w", "<cmd>w!<cr>", desc = "Write" },
 	},
 })
