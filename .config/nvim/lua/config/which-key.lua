@@ -8,7 +8,7 @@ wk.add({
 			local input = vim.fn.input('Quick chat: ')
 			if input ~= '' then
 				require('CopilotChat').ask(input, {
-					selection  = require('CopilotChat.select').buffer
+					selection  = require('CopilotChat.select').line
 				})
 			end
 		end,
