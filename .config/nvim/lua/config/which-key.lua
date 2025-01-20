@@ -54,7 +54,7 @@ wk.add({
 
 	-- Execution operations
 	{ '<leader>x', group = 'Execution' },
-	{ '<leader>xg' group = 'Golang' },
+	{ '<leader>xg', group = 'Golang' },
 	{ '<leader>xgr',
 		function()
 			local input = vim.fn.input('File to run: ')
