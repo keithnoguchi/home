@@ -3,14 +3,19 @@ local wk = require("which-key")
 wk.add({
 	-- https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#tips
 	{ '<leader>cc', group = 'Copilot chat' },
+	{ '<leader>ccd', '<cmd>CopilotChatDocs<cr>', desc = 'Document' },
+	{ '<leader>cce', '<cmd>CopilotChatExplain<cr>', desc = 'Explain' },
+	{ '<leader>ccf', '<cmd>CopilotChatFix<cr>', desc = 'Fix' },
 	{ '<leader>ccm', '<cmd>CopilotChatModels<cr>', desc = 'Models' },
-	{ '<leader>cco', '<cmd>CopilotChatOpen<cr>', desc = 'Open' },
+	{ '<leader>cco', '<cmd>CopilotChatOptimize<cr>', desc = 'Optimize' },
 	{ '<leader>ccp',
 		function()
 			local actions = require('CopilotChat.actions')
-			require('CopilotChat.integrations.telescope').pick(actions.prompt_actions())
+			require('CopilotChat.integrations.telescope').pick(
+				actions.prompt_actions()
+			)
 		end,
-		desc = 'Prompt actions',
+		desc = 'Prompt',
 	},
 	{ '<leader>ccq',
 		function()
@@ -21,9 +26,12 @@ wk.add({
 				})
 			end
 		end,
-		desc = 'Quick chat',
+		desc = 'Chat',
 	},
-	{ '<leader>cct', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle window' },
+	{ '<leader>ccr', '<cmd>CopilotChatReview<cr>', desc = 'Review' },
+	{ '<leader>ccs', '<cmd>CopilotChatSave<cr>', desc = 'Save' },
+	{ '<leader>cct', '<cmd>CopilotChatTest<cr>', desc = 'Test' },
+	{ '<leader>ccv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
 	{ "<leader>f", group = "File" },
 	{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
 	{ "<leader>fc", "<cmd>Telescope colorscheme<cr>", desc = "Color scheme" },
