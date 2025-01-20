@@ -26,5 +26,3 @@
 	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
-[url "git@github.com:cloudwan"]
-	insteadOf = "https://github.com/cloudwan"
