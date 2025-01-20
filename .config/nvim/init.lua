@@ -23,3 +23,6 @@ require('config.cmp')
 
 --- https://tamerlan.dev/setting-up-copilot-in-neovim-with-sane-settings/
 require('config.copilot')
+
+--- https://github.com/CopilotC-Nvim/CopilotChat.nvim
+require('config.copilot-chat')

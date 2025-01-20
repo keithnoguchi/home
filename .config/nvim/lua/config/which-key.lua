@@ -1,6 +1,19 @@
 -- https://github.com/folke/which-key.nvim
 local wk = require("which-key")
 wk.add({
+	-- https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#tips
+	{ '<leader>cc', group = 'Copilot chat' },
+	{ '<leader>ccq',
+		function()
+			local input = vim.fn.input('Quick chat: ')
+			if input ~= '' then
+				require('CopilotChat').ask(input, {
+					selection  = require('CopilotChat.select').buffer
+				})
+			end
+		end,
+		desc = 'Quick chat',
+	},
 	{ "<leader>f", group = "File" },
 	{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
 	{ "<leader>fc", "<cmd>Telescope colorscheme<cr>", desc = "Color scheme" },
