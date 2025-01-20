@@ -9,7 +9,11 @@ cmp.setup{
 	}),
 	sources = cmp.config.sources({
 		-- https://github.com/zbirenbaum/copilot-cmp?tab=readme-ov-file#nvim-cmp
-		{ name = 'copilot', group_index = 2 },
+		--
+		-- https://github.com/features/copilot/plans?cft=copilot_li.features_copilot
+		-- 2,000 code completion/month for the free account.  No way!?  Disabling it
+		-- altogether, or it's just stop working, then, I might leave it there.
+		-- { name = 'copilot', group_index = 2 },
 		{ name = 'nvim_lsp', group_index = 2 },
 	}),
 }
