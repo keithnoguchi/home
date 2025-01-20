@@ -1,6 +1,8 @@
 -- https://github.com/folke/which-key.nvim
 local wk = require("which-key")
 wk.add({
+	-- Copilot chat
+	--
 	-- https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#tips
 	{ '<leader>cc', group = 'Copilot chat' },
 	{ '<leader>ccd', '<cmd>CopilotChatDocs<cr>', desc = 'Document' },
@@ -32,6 +34,8 @@ wk.add({
 	{ '<leader>ccs', '<cmd>CopilotChatSave<cr>', desc = 'Save' },
 	{ '<leader>cct', '<cmd>CopilotChatTest<cr>', desc = 'Test' },
 	{ '<leader>ccv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
+
+	-- File operations
 	{ "<leader>f", group = "File" },
 	{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
 	{ "<leader>fc", "<cmd>Telescope colorscheme<cr>", desc = "Color scheme" },
@@ -39,12 +43,29 @@ wk.add({
 	{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
 	{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
 	{ "<leader>l", "<cmd>LspInfo<cr>", desc = "LSP info" },
+
+	-- Search operations
 	{ "<leader>s", group = "search" },
 	{ "<leader>sc", "<cmd>Telescope commands<cr>", desc = "Commands" },
 	{ "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Find help" },
 	{ "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
 	{ "<leader>sm", "<cmd>Telescope man_pages<cr>", desc = "Man pages" },
 	{ "<leader>sr", "<cmd>Telescope registers<cr>", desc = "Registers" },
+
+	-- Execution operations
+	{ '<leader>x', group = 'Execution' },
+	{ '<leader>xg' group = 'Golang' },
+	{ '<leader>xgr',
+		function()
+			local input = vim.fn.input('File to run: ')
+			if input ~= '' then
+				vim.cmd('!go run ' .. input)
+			end
+		end,
+		desc = 'Run',
+	},
+
+	-- Normal and view mode.
 	{
 		-- Nested mappings are allowed and can be added in any order
 		-- Most attributes can be inherited or overriden on an any level
