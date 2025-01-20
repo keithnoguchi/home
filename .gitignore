@@ -4,6 +4,7 @@
 .lesshst
 .viminfo
 .cache/
+.config/github-copilot/
 .docker/
 .irssi/
 .local/
