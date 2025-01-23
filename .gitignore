@@ -1,13 +1,17 @@
+.DS_Store
 .Xauthority
 .bash_history
 .bash_sessions/
+.cargo/
 .lesshst
 .viminfo
 .cache/
 .config/github-copilot/
+.config/htop/
 .docker/
 .irssi/
 .local/
+.rustup/
 .surf/
 .mutt/
 .gnupg/

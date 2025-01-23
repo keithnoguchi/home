@@ -1,5 +1,20 @@
 -- https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#configuration
-require('lspconfig').gopls.setup{
+local lsp = require('lspconfig')
+
+-- Rust
+lsp.rust_analyzer.setup{
+	settings = {
+		['rust-analyzer'] = {
+			cargo = { allFeatures = true },
+			checkOnSave = {
+				command = 'clippy',
+			},
+		},
+	},
+}
+
+-- Golang
+lsp.gopls.setup{
 	cmd = {'gopls'},
 	filetypes = {'go', 'gomod'},
 	root_dir = require('lspconfig').util.root_pattern('go.work', 'go.mod', '.git'),
