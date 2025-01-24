@@ -56,7 +56,8 @@ wk.add({
 	{ '<leader>x', group = 'Execution' },
 
 	--- Rust
-	{ '<leader>xc', group = 'Rust/cargo' },
+	{ '<leader>xc', group = 'Rust' },
+	{ '<leader>xcc', '<cmd>!cargo clippy<cr>', desc = "Clippy" },
 	{ '<leader>xcf', '<cmd>!cargo fmt<cr>', desc = "Format" },
 	{ '<leader>xcr', '<cmd>!cargo run<cr>', desc = "Run" },
 	{ '<leader>xct', '<cmd>!cargo test<cr>', desc = "Test" },
