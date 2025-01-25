@@ -29,3 +29,6 @@ require('config.copilot-cmp')
 
 --- https://github.com/CopilotC-Nvim/CopilotChat.nvim
 require('config.copilot-chat')
+
+--- https://medium.com/@shaikzahid0713/file-explorer-for-neovim-c324d2c53657
+require('config.tree')

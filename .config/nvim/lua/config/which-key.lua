@@ -35,6 +35,9 @@ wk.add({
 	{ '<leader>cct', '<cmd>CopilotChatTest<cr>', desc = 'Test' },
 	{ '<leader>ccv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
 
+	-- File exploring with NvimTree
+	{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explore" },
+
 	-- File operations
 	{ "<leader>f", group = "File" },
 	{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
