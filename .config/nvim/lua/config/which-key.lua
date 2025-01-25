@@ -44,13 +44,16 @@ wk.add({
 	{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
 	{ "<leader>l", "<cmd>LspInfo<cr>", desc = "LSP info" },
 
+	-- Reload
+	{ '<leader>r', '<cmd>luafile %<cr>', desc = 'Reload' },
+
 	-- Searches
-	{ "<leader>s", group = "Search" },
-	{ "<leader>sc", "<cmd>Telescope commands<cr>", desc = "Commands" },
-	{ "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Find help" },
-	{ "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
-	{ "<leader>sm", "<cmd>Telescope man_pages<cr>", desc = "Man pages" },
-	{ "<leader>sr", "<cmd>Telescope registers<cr>", desc = "Registers" },
+	{ '<leader>s', group = 'Search' },
+	{ '<leader>sc', '<cmd>Telescope commands<cr>', desc = 'Search commands' },
+	{ '<leader>sh', '<cmd>Telescope help_tags<cr>', desc = 'Find help' },
+	{ '<leader>sk', '<cmd>Telescope keymaps<cr>', desc = 'Search keymaps' },
+	{ '<leader>sm', '<cmd>Telescope man_pages<cr>', desc = 'Man pages' },
+	{ '<leader>sr', '<cmd>Telescope registers<cr>', desc = 'Search registers' },
 
 	-- Executions
 	{ '<leader>x', group = 'Execution' },
