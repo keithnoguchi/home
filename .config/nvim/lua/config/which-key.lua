@@ -45,7 +45,7 @@ wk.add({
 	{ "<leader>l", "<cmd>LspInfo<cr>", desc = "LSP info" },
 
 	-- Searches
-	{ "<leader>s", group = "search" },
+	{ "<leader>s", group = "Search" },
 	{ "<leader>sc", "<cmd>Telescope commands<cr>", desc = "Commands" },
 	{ "<leader>sh", "<cmd>Telescope help_tags<cr>", desc = "Find help" },
 	{ "<leader>sk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
