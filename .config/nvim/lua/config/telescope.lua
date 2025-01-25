@@ -2,36 +2,21 @@
 require('telescope').setup{
 	defaults = {
 		layout_config = {
-			anchor = 'E',         -- Show the telescope to the East
-			width = 0.5,          -- Overall width of Telescope window
-			preview_cutoff = 0,   -- Always show the preview
-			preview_width = 0.5,  -- Width of the preview window
-			preview_height = 0.5, -- Height of the preview window
+			anchor = 'east',
 		},
 	},
 	pickers = {
 		buffers = {
-			theme = "dropdown",
-			layout_config = {
-			},
+			theme = 'ivy',
 		},
 		find_files = {
-			theme = "dropdown",
-			layout_config = {
-				anchor = 'E',
-			},
+			theme = 'ivy',
 		},
 		live_grep = {
-			theme = "dropdown",
-			layout_config = {
-				anchor = 'E',
-			},
+			theme = 'dropdown',
 		},
 		help_tags = {
-			theme = "dropdown",
-			layout_config = {
-				anchor = 'E',
-			},
+			theme = 'dropdown',
 		},
 	},
 	extentions = {

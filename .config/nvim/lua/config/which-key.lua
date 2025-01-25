@@ -45,7 +45,8 @@ wk.add({
 	{ "<leader>l", "<cmd>LspInfo<cr>", desc = "LSP info" },
 
 	-- Reload
-	{ '<leader>r', '<cmd>luafile %<cr>', desc = 'Reload' },
+	{ '<leader>r', group = 'Reload' },
+	{ '<leader>rl', '<cmd>luafile %<cr>', desc = 'Reload current luafile' },
 
 	-- Searches
 	{ '<leader>s', group = 'Search' },
