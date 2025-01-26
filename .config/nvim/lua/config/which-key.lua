@@ -49,7 +49,7 @@ wk.add({
 
 	-- Reload
 	{ '<leader>r', group = 'Reload' },
-	{ '<leader>re', '<cmd>edit<cr>', desc = 'Buffer' },
+	{ '<leader>re', '<cmd>edit!<cr>', desc = 'Buffer' },
 	{ '<leader>rl', '<cmd>luafile %<cr>', desc = 'Luafile' },
 
 	-- Searches
@@ -64,7 +64,7 @@ wk.add({
 	{ '<leader>x', group = 'Execution' },
 
 	--- Rust
-	{ '<leader>xc', group = 'Rust' },
+	{ '<leader>xc', group = 'Cargo' },
 	{ '<leader>xcc', '<cmd>!cargo clippy<cr>', desc = "Clippy" },
 	{ '<leader>xcf', '<cmd>!cargo fmt<cr>', desc = "Format" },
 	{ '<leader>xcr', '<cmd>!cargo run<cr>', desc = "Run" },
