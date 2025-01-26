@@ -49,7 +49,8 @@ wk.add({
 
 	-- Reload
 	{ '<leader>r', group = 'Reload' },
-	{ '<leader>rl', '<cmd>luafile %<cr>', desc = 'Reload current luafile' },
+	{ '<leader>re', '<cmd>edit<cr>', desc = 'Buffer' },
+	{ '<leader>rl', '<cmd>luafile %<cr>', desc = 'Luafile' },
 
 	-- Searches
 	{ '<leader>s', group = 'Search' },
