@@ -1,7 +1,7 @@
 -- https://medium.com/@shaikzahid0713/the-neovim-series-32163eb1f5d0
 
 --- https://medium.com/@shaikzahid0713/2bc6b878682
-require("options")
+--require("options")
 
 --- https://medium.com/@shaikzahid0713/keyboard-shortcuts-in-neovim-d04cd7f551a7
 require("keymaps")
@@ -32,3 +32,6 @@ require('config.copilot-chat')
 
 --- https://medium.com/@shaikzahid0713/file-explorer-for-neovim-c324d2c53657
 require('config.tree')
+
+--- https://medium.com/@shaikzahid0713/treesitter-7a52f64291c8
+require('config.treesitter')
