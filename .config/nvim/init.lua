@@ -1,7 +1,7 @@
 -- https://medium.com/@shaikzahid0713/the-neovim-series-32163eb1f5d0
 
 --- https://medium.com/@shaikzahid0713/2bc6b878682
---require("options")
+require("options")
 
 --- https://medium.com/@shaikzahid0713/keyboard-shortcuts-in-neovim-d04cd7f551a7
 require("keymaps")
