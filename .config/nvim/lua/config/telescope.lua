@@ -7,7 +7,7 @@ require('telescope').setup{
 	},
 	pickers = {
 		buffers = {
-			theme = 'ivy',
+			theme = 'dropdown',
 		},
 		find_files = {
 			theme = 'dropdown',
