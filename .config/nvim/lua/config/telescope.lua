@@ -10,7 +10,7 @@ require('telescope').setup{
 			theme = 'ivy',
 		},
 		find_files = {
-			theme = 'ivy',
+			theme = 'dropdown',
 		},
 		live_grep = {
 			theme = 'dropdown',
