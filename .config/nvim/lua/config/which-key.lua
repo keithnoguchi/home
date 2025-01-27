@@ -60,46 +60,6 @@ wk.add({
 	{ '<leader>sm', '<cmd>Telescope man_pages<cr>', desc = 'Man pages' },
 	{ '<leader>sr', '<cmd>Telescope registers<cr>', desc = 'Search registers' },
 
-	-- Executions
-	{ '<leader>x', group = 'Execution' },
-
-	--- Rust
-	{ '<leader>xc', group = 'Cargo' },
-	{ '<leader>xcc', '<cmd>!cargo clippy<cr>', desc = "Clippy" },
-	{ '<leader>xcf', '<cmd>!cargo fmt<cr>', desc = "Format" },
-	{ '<leader>xcr', '<cmd>!cargo run<cr>', desc = "Run" },
-	{ '<leader>xct', '<cmd>!cargo test<cr>', desc = "Test" },
-
-	--- Golang
-	{ '<leader>xg', group = 'Golang' },
-	{ '<leader>xgf',
-		function()
-			local input = vim.fn.input('File/directory to format: ')
-			if input ~= '' then
-				vim.cmd('!go fmt ' .. input)
-			end
-		end,
-		desc = 'Format',
-	},
-	{ '<leader>xgr',
-		function()
-			local input = vim.fn.input('File/directory to run: ')
-			if input ~= '' then
-				vim.cmd('!go run ' .. input)
-			end
-		end,
-		desc = 'Run',
-	},
-	{ '<leader>xgt',
-		function()
-			local input = vim.fn.input('File/directory to test: ')
-			if input ~= '' then
-				vim.cmd('!go run ' .. input)
-			end
-		end,
-		desc = 'Test',
-	},
-
 	-- Normal and view mode.
 	{
 		-- Nested mappings are allowed and can be added in any order
@@ -110,5 +70,45 @@ wk.add({
 		{ "<leader>p", "<cmd>Lazy<cr>", desc = "Plugin Manager" },
 		{ "<leader>q", "<cmd>q<cr>", desc = "Quit" },
 		{ "<leader>w", "<cmd>w!<cr>", desc = "Write" },
+
+		-- Executions
+		{ '<leader>x', group = 'Execution' },
+
+		--- Rust
+		{ '<leader>xc', group = 'Cargo' },
+		{ '<leader>xcc', '<cmd>!cargo clippy<cr>', desc = "Clippy" },
+		{ '<leader>xcf', '<cmd>!cargo fmt<cr>', desc = "Format" },
+		{ '<leader>xcr', '<cmd>!cargo run<cr>', desc = "Run" },
+		{ '<leader>xct', '<cmd>!cargo test<cr>', desc = "Test" },
+
+		--- Golang
+		{ '<leader>xg', group = 'Golang' },
+		{ '<leader>xgf',
+			function()
+				local input = vim.fn.input('File/directory to format: ')
+				if input ~= '' then
+					vim.cmd('!go fmt ' .. input)
+				end
+			end,
+			desc = 'Format',
+		},
+		{ '<leader>xgr',
+			function()
+				local input = vim.fn.input('File/directory to run: ')
+				if input ~= '' then
+					vim.cmd('!go run ' .. input)
+				end
+			end,
+			desc = 'Run',
+		},
+		{ '<leader>xgt',
+			function()
+				local input = vim.fn.input('File/directory to test: ')
+				if input ~= '' then
+					vim.cmd('!go run ' .. input)
+				end
+			end,
+			desc = 'Test',
+		},
 	},
 })
