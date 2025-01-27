@@ -7,6 +7,21 @@ cmp.setup{
 		['<c-b>'] = cmp.mapping.scroll_docs(-4),
 		['<c-f>'] = cmp.mapping.scroll_docs(4),
 	}),
+	sorting = {
+		priority_weight = 2,
+		comparators = {
+			function(e1, e2)
+				local kind1 = e1.source.name
+				local kind2 = e2.source.name
+				if kind1 == 'nvim_lsp' and kind2 == 'copilot' then
+					return true
+				elseif kind1 == 'copilot' and kind2 == 'nvim_lsp' then
+					return false
+				end
+				return nil
+			end,
+		},
+	},
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp', group_index = 1 },
 		-- https://github.com/zbirenbaum/copilot-cmp?tab=readme-ov-file#nvim-cmp
