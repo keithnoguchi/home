@@ -3,7 +3,7 @@ local cc = require('CopilotChat')
 cc.setup({
 	window = {
 		layout = 'vertical',
-		width = 0.45,
+		width = 0.30,
 	},
 	allow_insecure = false,
 	mappings = {
