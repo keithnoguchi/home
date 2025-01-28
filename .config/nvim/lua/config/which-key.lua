@@ -88,7 +88,8 @@ wk.add({
 		{ '<leader>wj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
 		{ '<leader>wk', '<cmd>resize -10<cr>',          desc = 'Shrink hight' },
 		{ '<leader>wl', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
-		{ '<leader>ws', '<cmd>w!<cr>',                  desc = 'Save' },
+		{ '<leader>wq', '<c-w>q<cr>',                   desc = 'Quit window' },
+		{ '<leader>ws', '<cmd>w!<cr>',                  desc = 'Save buffer' },
 		{ '<leader>ww', '<c-w>w<cr>',                   desc = 'Switch window' },
 		{ '<leader>wx', '<c-w>x<cr>',                   desc = 'Swap window' },
 
