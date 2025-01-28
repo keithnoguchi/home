@@ -45,18 +45,13 @@ wk.add({
 	{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
 	{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
 	{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
-	{ "<leader>l", "<cmd>LspInfo<cr>", desc = "LSP info" },
-
-	-- Reload
-	{ '<leader>r', group = 'Reload' },
-	{ '<leader>re', '<cmd>edit!<cr>', desc = 'Buffer' },
-	{ '<leader>rl', '<cmd>luafile %<cr>', desc = 'Luafile' },
 
 	-- Searches
 	{ '<leader>s', group = 'Search' },
-	{ '<leader>sc', '<cmd>Telescope commands<cr>', desc = 'Search commands' },
+	{ '<leader>sc', '<cmd>Telescope commands<cr>',  desc = 'Search commands' },
 	{ '<leader>sh', '<cmd>Telescope help_tags<cr>', desc = 'Find help' },
-	{ '<leader>sk', '<cmd>Telescope keymaps<cr>', desc = 'Search keymaps' },
+	{ '<leader>sk', '<cmd>Telescope keymaps<cr>',   desc = 'Search keymaps' },
+	{ '<leader>sl', '<cmd>LspInfo<cr>',             desc = 'LSP info' },
 	{ '<leader>sm', '<cmd>Telescope man_pages<cr>', desc = 'Man pages' },
 	{ '<leader>sr', '<cmd>Telescope registers<cr>', desc = 'Search registers' },
 
@@ -66,10 +61,31 @@ wk.add({
 		-- Most attributes can be inherited or overriden on an any level
 		-- There's no limit to the depth of nesting.
 		mode = { "n", "v" },
-		{ "<leader>k", "<cmd>bdelete<cr>", desc = "Kill buffer" },
-		{ "<leader>p", "<cmd>Lazy<cr>", desc = "Plugin Manager" },
-		{ "<leader>q", "<cmd>q<cr>", desc = "Quit" },
-		{ "<leader>w", "<cmd>w!<cr>", desc = "Write" },
+		{ '<leader>d', '<cmd>bdelete<cr>',    desc = 'Kill buffer' },
+		{ '<leader>h', '<c-w>h',              desc = 'Move left' },
+		{ '<leader>j', '<c-w>j',              desc = 'Move down' },
+		{ '<leader>k', '<c-w>k',              desc = 'Move up' },
+		{ '<leader>l', '<c-w>l',              desc = 'Move right' },
+		{ '<leader>o', '<c-w>o',              desc = 'Single window' },
+		{ '<leader>p', '<cmd>Lazy<cr>',       desc = 'Plugin Manager' },
+		{ '<leader>q', '<cmd>q<cr>',          desc = 'Quit' },
+		{ '<leader>v', '<c-w>v',              desc = 'Split vertically' },
+		{ '<leader>w', '<cmd>w!<cr>',         desc = 'Write' },
+		{ '<leader>-', '<c-w>s',              desc = 'Split holizontally' },
+
+		-- Buffer navigation
+		{ '<leader><tab>', '<cmd>bnext<cr>',   desc = 'Next buffer' },
+		{ '<leader><s-tab>', '<cmd>bprev<cr>', desc = 'Previous buffer' },
+
+		-- Reload
+		{ '<leader>r', group = 'Refresh/Reload/Resize' },
+		{ '<leader>re', '<cmd>edit!<cr>',              desc = 'Buffer' },
+		{ '<leader>rh', '<cmd>vertical resize +5<cr>', desc = 'Expand width' },
+		{ '<leader>rj', '<cmd>resize +5<cr>',          desc = 'Shrink hight' },
+		{ '<leader>rk', '<cmd>resize -5<cr>',          desc = 'Expand hight' },
+		{ '<leader>rl', '<cmd>vertical resize -5<cr>', desc = 'Shrink width' },
+		{ '<leader>rr', '<cmd>luafile %<cr>',          desc = 'Luafile' },
+		{ '<leader>rs', '<cmd>nohlsearch<cr>',         desc = 'Highlight search' },
 
 		-- Executions
 		{ '<leader>x', group = 'Execution' },

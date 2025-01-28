@@ -19,21 +19,22 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal
-keymap("n", "<c-h>", "<c-w>h", opts) -- left window
-keymap("n", "<c-j>", "<c-w>j", opts) -- down window
-keymap("n", "<c-k>", "<c-w>k", opts) -- up window
-keymap("n", "<c-l>", "<c-w>l", opts) -- right window
+-- Moving to the which-key configuration.
+-- keymap("n", "<c-h>", "<c-w>h", opts) -- left window
+-- keymap("n", "<c-j>", "<c-w>j", opts) -- down window
+-- keymap("n", "<c-k>", "<c-w>k", opts) -- up window
+-- keymap("n", "<c-l>", "<c-w>l", opts) -- right window
 
 -- Resize with arrows when using multiple windows
-keymap("n", "<c-p>", ":resize -2<CR>", opts)
-keymap("n", "<c-v>", ":resize +2<CR>", opts)
-keymap("n", "<c-n>", ":vertical resize -1<CR>", opts)
-keymap("n", "<c-m>", ":vertical resize +3<CR>", opts)
+-- keymap("n", "<c-p>", ":resize -2<CR>", opts)
+-- keymap("n", "<c-v>", ":resize +2<CR>", opts)
+-- keymap("n", "<c-n>", ":vertical resize -1<CR>", opts)
+-- keymap("n", "<c-m>", ":vertical resize +3<CR>", opts)
 
--- navigate buffers
-keymap("n", "<tab>", ":bnext<cr>", opts) -- next buffer
-keymap("n", "<s-tab>", "bprevious<cr>", opts) -- previous buffer
-keymap("n", "<leader>h", "<cmd>nohlsearch<cr>", opts) -- no highlight search
+-- navigate buffers (move to the which-key)
+-- keymap("n", "<tab>", ":bnext<cr>", opts) -- next buffer
+-- keymap("n", "<s-tab>", "bprevious<cr>", opts) -- previous buffer
+-- keymap("n", "<leader>h", "<cmd>nohlsearch<cr>", opts) -- no highlight search
 
 -- move text up and down
 -- keymap("n", "<a-j>", "<esc>:m .+1<cr>==gi", opts) -- Alt-j
