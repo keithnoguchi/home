@@ -4,6 +4,8 @@ wk.add({
 	-- Copilot chat
 	--
 	-- https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#tips
+	{ '<leader>c', group = 'Chat' },
+
 	{ '<leader>cc', group = 'Copilot chat' },
 	{ '<leader>ccd', '<cmd>CopilotChatDocs<cr>', desc = 'Document' },
 	{ '<leader>cce', '<cmd>CopilotChatExplain<cr>', desc = 'Explain' },
@@ -54,6 +56,7 @@ wk.add({
 	{ '<leader>sl', '<cmd>LspInfo<cr>',             desc = 'LSP info' },
 	{ '<leader>sm', '<cmd>Telescope man_pages<cr>', desc = 'Man pages' },
 	{ '<leader>sr', '<cmd>Telescope registers<cr>', desc = 'Search registers' },
+	{ '<leader>ss', '<cmd>nohlsearch<cr>',          desc = 'Clear search highlights' },
 
 	-- Normal and view mode.
 	{
@@ -80,19 +83,20 @@ wk.add({
 
 		-- Reload
 		{ '<leader>r', group = 'Reload/Resize' },
-		{ '<leader>rc', '<cmd>luafile %<cr>',           desc = 'Luafile' },
 		{ '<leader>re', '<cmd>edit!<cr>',               desc = 'Buffer' },
 		{ '<leader>rh', '<cmd>vertical resize +10<cr>', desc = 'Expand width' },
 		{ '<leader>rj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
 		{ '<leader>rk', '<cmd>resize -10<cr>',          desc = 'Shrink hight' },
 		{ '<leader>rl', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
-		{ '<leader>rs', '<cmd>nohlsearch<cr>',          desc = 'Highlight search' },
+		{ '<leader>rr', '<cmd>luafile %<cr>',           desc = 'Luafile' },
 
 		-- Executions
-		{ '<leader>x', group = 'Commands' },
+		{ '<leader>x', group = 'Execute' },
 
 		--- Rust
 		{ '<leader>xc', group = 'Cargo' },
+		{ '<leader>xcb', '<cmd>!cargo build<cr>', desc = "Build" },
+		{ '<leader>xcc', '<cmd>!cargo check<cr>', desc = "Check" },
 		{ '<leader>xcf', '<cmd>!cargo fmt<cr>', desc = "Format" },
 		{ '<leader>xcr', '<cmd>!cargo run<cr>', desc = "Run" },
 		{ '<leader>xct', '<cmd>!cargo test<cr>', desc = "Test" },
