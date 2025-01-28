@@ -80,7 +80,7 @@ wk.add({
 
 		-- Reload
 		{ '<leader>r', group = 'Reload/Resize' },
-		c '<leader>rc', '<cmd>luafile %<cr>',           desc = 'Luafile' },
+		{ '<leader>rc', '<cmd>luafile %<cr>',           desc = 'Luafile' },
 		{ '<leader>re', '<cmd>edit!<cr>',               desc = 'Buffer' },
 		{ '<leader>rh', '<cmd>vertical resize +10<cr>', desc = 'Expand width' },
 		{ '<leader>rj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
