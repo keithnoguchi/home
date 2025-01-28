@@ -72,6 +72,7 @@ wk.add({
 		{ '<leader>v', '<c-w>v',              desc = 'Split vertically' },
 		{ '<leader>w', '<cmd>w!<cr>',         desc = 'Write' },
 		{ '<leader>-', '<c-w>s',              desc = 'Split holizontally' },
+		{ '<leader>z', '<c-z>',               desc = 'Suspend' },
 
 		-- Buffer navigation
 		{ '<leader><tab>', '<cmd>bnext<cr>',   desc = 'Next buffer' },
@@ -81,8 +82,8 @@ wk.add({
 		{ '<leader>r', group = 'Refresh/Reload/Resize' },
 		{ '<leader>re', '<cmd>edit!<cr>',              desc = 'Buffer' },
 		{ '<leader>rh', '<cmd>vertical resize +5<cr>', desc = 'Expand width' },
-		{ '<leader>rj', '<cmd>resize +5<cr>',          desc = 'Shrink hight' },
-		{ '<leader>rk', '<cmd>resize -5<cr>',          desc = 'Expand hight' },
+		{ '<leader>rj', '<cmd>resize +5<cr>',          desc = 'Expand hight' },
+		{ '<leader>rk', '<cmd>resize -5<cr>',          desc = 'Shrink hight' },
 		{ '<leader>rl', '<cmd>vertical resize -5<cr>', desc = 'Shrink width' },
 		{ '<leader>rr', '<cmd>luafile %<cr>',          desc = 'Luafile' },
 		{ '<leader>rs', '<cmd>nohlsearch<cr>',         desc = 'Highlight search' },
