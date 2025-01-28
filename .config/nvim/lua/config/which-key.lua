@@ -6,7 +6,7 @@ wk.add({
 	-- https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#tips
 	{ '<leader>c', group = 'Chat' },
 
-	{ '<leader>cc', group = 'Copilot chat' },
+	{ '<leader>cc', group = 'Copilot' },
 	{ '<leader>ccd', '<cmd>CopilotChatDocs<cr>', desc = 'Document' },
 	{ '<leader>cce', '<cmd>CopilotChatExplain<cr>', desc = 'Explain' },
 	{ '<leader>ccf', '<cmd>CopilotChatFix<cr>', desc = 'Fix' },
@@ -72,8 +72,8 @@ wk.add({
 		{ '<leader>o', '<c-w>o',              desc = 'Single window' },
 		{ '<leader>p', '<cmd>Lazy<cr>',       desc = 'Plugin Manager' },
 		{ '<leader>q', '<cmd>q<cr>',          desc = 'Quit' },
+		{ '<leader>r', '<cmd>luafile %<cr>',  desc = 'Reload Luafile' },
 		{ '<leader>v', '<c-w>v',              desc = 'Split vertically' },
-		{ '<leader>w', '<cmd>w!<cr>',         desc = 'Write' },
 		{ '<leader>-', '<c-w>s',              desc = 'Split holizontally' },
 		{ '<leader>z', '<c-z>',               desc = 'Suspend' },
 
@@ -81,14 +81,14 @@ wk.add({
 		{ '<leader><tab>', '<cmd>bnext<cr>',   desc = 'Next buffer' },
 		{ '<leader><s-tab>', '<cmd>bprev<cr>', desc = 'Previous buffer' },
 
-		-- Reload
-		{ '<leader>r', group = 'Reload/Resize' },
-		{ '<leader>re', '<cmd>edit!<cr>',               desc = 'Buffer' },
-		{ '<leader>rh', '<cmd>vertical resize +10<cr>', desc = 'Expand width' },
-		{ '<leader>rj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
-		{ '<leader>rk', '<cmd>resize -10<cr>',          desc = 'Shrink hight' },
-		{ '<leader>rl', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
-		{ '<leader>rr', '<cmd>luafile %<cr>',           desc = 'Luafile' },
+		-- Windows
+		{ '<leader>w', group = 'Window' },
+		{ '<leader>we', '<cmd>edit!<cr>',               desc = 'Reload buffer' },
+		{ '<leader>wh', '<cmd>vertical resize +10<cr>', desc = 'Expand width' },
+		{ '<leader>wj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
+		{ '<leader>wk', '<cmd>resize -10<cr>',          desc = 'Shrink hight' },
+		{ '<leader>wl', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
+		{ '<leader>ww', '<cmd>w!<cr>',                  desc = 'Write buffer' },
 
 		-- Executions
 		{ '<leader>x', group = 'Execute' },
