@@ -79,17 +79,17 @@ wk.add({
 		{ '<leader><s-tab>', '<cmd>bprev<cr>', desc = 'Previous buffer' },
 
 		-- Reload
-		{ '<leader>r', group = 'Refresh/Reload/Resize' },
-		{ '<leader>re', '<cmd>edit!<cr>',              desc = 'Buffer' },
-		{ '<leader>rh', '<cmd>vertical resize +5<cr>', desc = 'Expand width' },
-		{ '<leader>rj', '<cmd>resize +5<cr>',          desc = 'Expand hight' },
-		{ '<leader>rk', '<cmd>resize -5<cr>',          desc = 'Shrink hight' },
-		{ '<leader>rl', '<cmd>vertical resize -5<cr>', desc = 'Shrink width' },
-		{ '<leader>rr', '<cmd>luafile %<cr>',          desc = 'Luafile' },
-		{ '<leader>rs', '<cmd>nohlsearch<cr>',         desc = 'Highlight search' },
+		{ '<leader>r', group = 'Reload/Resize' },
+		c '<leader>rc', '<cmd>luafile %<cr>',           desc = 'Luafile' },
+		{ '<leader>re', '<cmd>edit!<cr>',               desc = 'Buffer' },
+		{ '<leader>rh', '<cmd>vertical resize +10<cr>', desc = 'Expand width' },
+		{ '<leader>rj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
+		{ '<leader>rk', '<cmd>resize -10<cr>',          desc = 'Shrink hight' },
+		{ '<leader>rl', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
+		{ '<leader>rs', '<cmd>nohlsearch<cr>',          desc = 'Highlight search' },
 
 		-- Executions
-		{ '<leader>x', group = 'Execution' },
+		{ '<leader>x', group = 'Commands' },
 
 		--- Rust
 		{ '<leader>xc', group = 'Cargo' },
