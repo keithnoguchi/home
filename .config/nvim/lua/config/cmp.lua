@@ -3,7 +3,7 @@ local cmp = require('cmp')
 cmp.setup{
 	mapping = cmp.mapping.preset.insert({
 		['<c-space>'] = cmp.mapping.complete(),
-		['<tab>'] = cmp.mapping.confirm({ select = true }),
+		['<c-j>'] = cmp.mapping.confirm({ select = true }),
 		['<c-b>'] = cmp.mapping.scroll_docs(-4),
 		['<c-f>'] = cmp.mapping.scroll_docs(4),
 	}),
