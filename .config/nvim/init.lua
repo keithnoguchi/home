@@ -35,3 +35,5 @@ require('config.tree')
 
 --- https://medium.com/@shaikzahid0713/treesitter-7a52f64291c8
 require('config.treesitter')
+
+vim.g.copilot_enabled = false

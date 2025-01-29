@@ -37,3 +37,10 @@ cmp.setup{
 		{ name = 'copilot', group_index = 2 },
 	}),
 }
+
+// Disable copilot suggestions in the Rust source code.
+cmp.setup.filetype('rust', {
+	sources = cmp.config.sources({
+		{ name = 'nvim_lsp', group_index = 1},
+	}),
+})
