@@ -30,6 +30,7 @@ wk.add({
 		{ '<leader>p', '<cmd>Lazy<cr>',       desc  = 'Plugin Manager' },
 		{ '<leader>q', '<cmd>q<cr>',          desc  = 'Quit' },
 		{ '<leader>r', '<cmd>luafile %<cr>',  desc  = 'Reload Luafile' },
+		{ '<leader>s', '<cmd>w!<cr>',         desc  = 'Save' },
 		{ '<leader>w',                        group = 'Window' },
 		{ '<leader>x',                        group = 'Execute' },
 		{ '<leader>z', '<c-z>',               desc  = 'Suspend' },
@@ -104,7 +105,6 @@ wk.add({
 		{ '<leader>wq', '<c-w>q<cr>',                   desc = 'Quit window' },
 		{ '<leader>ws', '<c-w>s',                       desc = 'Split holizontally' },
 		{ '<leader>wv', '<c-w>v',                       desc = 'Split vertically' },
-		{ '<leader>ww', '<cmd>w!<cr>',                  desc = 'Save window' },
 		{ '<leader>wx', '<c-w>x<cr>',                   desc = 'Swap window' },
 
 		-- Copilot chat
