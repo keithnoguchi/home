@@ -47,9 +47,9 @@ wk.add({
 	-- File operations
 	{ '<leader>fb', '<cmd>Telescope buffers<cr>',     desc = 'Buffers' },
 	{ '<leader>fc', '<cmd>Telescope colorscheme<cr>', desc = 'Color scheme' },
-	{ '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
-	{ '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Live grep' },
-	{ '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Help tags' },
+	{ '<leader>ff', '<cmd>Telescope find_files<cr>',  desc = 'Find files' },
+	{ '<leader>fg', '<cmd>Telescope live_grep<cr>',   desc = 'Live grep' },
+	{ '<leader>fh', '<cmd>Telescope help_tags<cr>',   desc = 'Help tags' },
 
 	--- Golang
 	{ '<leader>gf',
