@@ -91,34 +91,48 @@ wk.add({
 	{ '<leader>is', '<cmd>nohlsearch<cr>',          desc = 'Clear search highlights' },
 
 	-- Tmux
-	{ '<leader>tc', '<cmd>!tmux list-clients<cr>',     desc = 'Clients' },
-	{ '<leader>th',
-		function()
-			vim.fn.system('tmux split-window -v')
-		end,
-		desc = 'Split holizontaly',
-	},
-	{ '<leader>tn',
+	{ '<leader>ts',                       group = 'Sessions' },
+	{ '<leader>tsl', '<cmd>!tmux ls<cr>', desc = 'List sessions' },
+	{ '<leader>tsn',
 		function()
 			vim.fn.system('tmux switch-client -n')
 		end,
 		desc = 'Next session'
 	},
-	{ '<leader>tl', '<cmd>!tmux ls<cr>',               desc = 'Sessions' },
-	{ '<leader>tp',
+	{ '<leader>tsp',
 		function()
-			vim.fn.system('tmux switch-client -l')
+			vim.fn.system('tmux switch-client -p')
 		end,
 		desc = 'Prev session'
 	},
-	{ '<leader>tv',
+
+	{ '<leader>tw',                                 group = 'Windows' },
+	{ '<leader>twl', '<cmd>!tmux list-windows<cr>', desc  = 'List windows' },
+	{ '<leader>twh',
+		function()
+			vim.fn.system('tmux split-window -v')
+		end,
+		desc = 'Split window holizontaly',
+	},
+	{ '<leader>twn',
+		function()
+			vim.fn.system('tmux next-window')
+		end,
+		desc  = 'Next window',
+	},
+	{ '<leader>twp',
+		function()
+			vim.fn.system('tmux previous-window')
+		end,
+		desc  = 'Previous window',
+	},
+	{ '<leader>twv',
 		function()
 			vim.fn.system('tmux split-window -h')
 		end,
-		desc = 'Split vertically',
+		desc = 'Split window vertically',
 	},
-	{ '<leader>tw', '<cmd>!tmux list-windows<cr>',     desc = 'Windows' },
-	{ '<leader>tz',
+	{ '<leader>twz',
 		function()
 			vim.fn.system('tmux resize-pane -Z')
 		end,
