@@ -1,42 +1,6 @@
 -- https://github.com/folke/which-key.nvim
 local wk = require("which-key")
 wk.add({
-	-- Copilot chat
-	--
-	-- https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#tips
-	{ '<leader>c', group = 'Chat' },
-
-	{ '<leader>cc', group = 'Copilot' },
-	{ '<leader>ccd', '<cmd>CopilotChatDocs<cr>', desc = 'Document' },
-	{ '<leader>cce', '<cmd>CopilotChatExplain<cr>', desc = 'Explain' },
-	{ '<leader>ccf', '<cmd>CopilotChatFix<cr>', desc = 'Fix' },
-	{ '<leader>ccm', '<cmd>CopilotChatModels<cr>', desc = 'Models' },
-	{ '<leader>cco', '<cmd>CopilotChatOptimize<cr>', desc = 'Optimize' },
-	{ '<leader>ccp',
-		function()
-			local actions = require('CopilotChat.actions')
-			require('CopilotChat.integrations.telescope').pick(
-				actions.prompt_actions()
-			)
-		end,
-		desc = 'Prompt',
-	},
-	{ '<leader>ccq',
-		function()
-			local input = vim.fn.input('Quick chat: ')
-			if input ~= '' then
-				require('CopilotChat').ask(input, {
-					selection  = require('CopilotChat.select').line
-				})
-			end
-		end,
-		desc = 'Chat',
-	},
-	{ '<leader>ccr', '<cmd>CopilotChatReview<cr>', desc = 'Review' },
-	{ '<leader>ccs', '<cmd>CopilotChatSave<cr>', desc = 'Save' },
-	{ '<leader>cct', '<cmd>CopilotChatTest<cr>', desc = 'Test' },
-	{ '<leader>ccv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
-
 	-- File exploring with NvimTree
 	{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explore" },
 
@@ -80,7 +44,8 @@ wk.add({
 		{ '<leader><s-tab>', '<cmd>bprev<cr>', desc = 'Previous buffer' },
 
 		-- Windows
-		{ '<leader>w', group = 'Window' },
+		{ '<leader>w',  group = 'Window' },
+		{ '<leader>wc', group = 'Chat' },
 		{ '<leader>we', '<cmd>edit!<cr>',               desc = 'Reload buffer' },
 		{ '<leader>wh', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
 		{ '<leader>wj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
@@ -93,6 +58,40 @@ wk.add({
 		{ '<leader>wv', '<c-w>v',                       desc = 'Split vertically' },
 		{ '<leader>ww', '<cmd>w!<cr>',                  desc = 'Save window' },
 		{ '<leader>wx', '<c-w>x<cr>',                   desc = 'Swap window' },
+
+		-- Copilot chat
+		--
+		-- https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#tips
+		{ '<leader>wc', group = 'Copilot' },
+		{ '<leader>wcd', '<cmd>CopilotChatDocs<cr>', desc = 'Document' },
+		{ '<leader>wce', '<cmd>CopilotChatExplain<cr>', desc = 'Explain' },
+		{ '<leader>wcf', '<cmd>CopilotChatFix<cr>', desc = 'Fix' },
+		{ '<leader>wcm', '<cmd>CopilotChatModels<cr>', desc = 'Models' },
+		{ '<leader>wco', '<cmd>CopilotChatOptimize<cr>', desc = 'Optimize' },
+		{ '<leader>wcp',
+			function()
+				local actions = require('CopilotChat.actions')
+				require('CopilotChat.integrations.telescope').pick(
+					actions.prompt_actions()
+				)
+			end,
+			desc = 'Prompt',
+		},
+		{ '<leader>wcq',
+			function()
+				local input = vim.fn.input('Quick chat: ')
+				if input ~= '' then
+					require('CopilotChat').ask(input, {
+						selection  = require('CopilotChat.select').line
+					})
+				end
+			end,
+			desc = 'Chat',
+		},
+		{ '<leader>wcr', '<cmd>CopilotChatReview<cr>', desc = 'Review' },
+		{ '<leader>wcs', '<cmd>CopilotChatSave<cr>', desc = 'Save' },
+		{ '<leader>wct', '<cmd>CopilotChatTest<cr>', desc = 'Test' },
+		{ '<leader>wcv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
 
 		-- Executions
 		{ '<leader>x', group = 'Execute' },
