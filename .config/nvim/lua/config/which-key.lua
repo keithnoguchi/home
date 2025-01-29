@@ -12,16 +12,6 @@ wk.add({
 	{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
 	{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
 
-	-- Searches
-	{ '<leader>s', group = 'Search' },
-	{ '<leader>sc', '<cmd>Telescope commands<cr>',  desc = 'Search commands' },
-	{ '<leader>sh', '<cmd>Telescope help_tags<cr>', desc = 'Find help' },
-	{ '<leader>sk', '<cmd>Telescope keymaps<cr>',   desc = 'Search keymaps' },
-	{ '<leader>sl', '<cmd>LspInfo<cr>',             desc = 'LSP info' },
-	{ '<leader>sm', '<cmd>Telescope man_pages<cr>', desc = 'Man pages' },
-	{ '<leader>sr', '<cmd>Telescope registers<cr>', desc = 'Search registers' },
-	{ '<leader>ss', '<cmd>nohlsearch<cr>',          desc = 'Clear search highlights' },
-
 	-- Normal and view mode.
 	{
 		-- Nested mappings are allowed and can be added in any order
@@ -32,6 +22,7 @@ wk.add({
 		{ '<leader>d', '<cmd>bdelete<cr>',    desc  = 'Kill buffer' },
 		{ '<leader>g',                        group = 'Golang' },
 		{ '<leader>h', '<c-w>h',              desc  = 'Move left' },
+		{ '<leader>i',                        group = 'Info' },
 		{ '<leader>j', '<c-w>j',              desc  = 'Move down' },
 		{ '<leader>k', '<c-w>k',              desc  = 'Move up' },
 		{ '<leader>l', '<c-w>l',              desc  = 'Move right' },
@@ -91,6 +82,15 @@ wk.add({
 			end,
 			desc = 'Test',
 		},
+
+		-- Info
+		{ '<leader>ic', '<cmd>Telescope commands<cr>',  desc = 'Search commands' },
+		{ '<leader>ih', '<cmd>Telescope help_tags<cr>', desc = 'Find help' },
+		{ '<leader>ik', '<cmd>Telescope keymaps<cr>',   desc = 'Search keymaps' },
+		{ '<leader>il', '<cmd>LspInfo<cr>',             desc = 'LSP info' },
+		{ '<leader>im', '<cmd>Telescope man_pages<cr>', desc = 'Man pages' },
+		{ '<leader>ir', '<cmd>Telescope registers<cr>', desc = 'Search registers' },
+		{ '<leader>is', '<cmd>nohlsearch<cr>',          desc = 'Clear search highlights' },
 
 		-- Windows
 		{ '<leader>wc',                                 group = 'Chat' },
