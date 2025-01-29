@@ -30,6 +30,7 @@ wk.add({
 		mode = { "n", "v" },
 		{ '<leader>c',                        group = 'Cargo' },
 		{ '<leader>d', '<cmd>bdelete<cr>',    desc  = 'Kill buffer' },
+		{ '<leader>g',                        group = 'Golang' },
 		{ '<leader>h', '<c-w>h',              desc  = 'Move left' },
 		{ '<leader>j', '<c-w>j',              desc  = 'Move down' },
 		{ '<leader>k', '<c-w>k',              desc  = 'Move up' },
@@ -53,8 +54,37 @@ wk.add({
 		{ '<leader>cr', '<cmd>!cargo run<cr>',   desc = 'Run' },
 		{ '<leader>ct', '<cmd>!cargo test<cr>',  desc = 'Test' },
 
+		--- Golang
+		{ '<leader>gf',
+			function()
+				local input = vim.fn.input('File/directory to format: ')
+				if input ~= '' then
+					vim.cmd('!go fmt ' .. input)
+				end
+			end,
+			desc = 'Format',
+		},
+		{ '<leader>gr',
+			function()
+				local input = vim.fn.input('File/directory to run: ')
+				if input ~= '' then
+					vim.cmd('!go run ' .. input)
+				end
+			end,
+			desc = 'Run',
+		},
+		{ '<leader>gt',
+			function()
+				local input = vim.fn.input('File/directory to test: ')
+				if input ~= '' then
+					vim.cmd('!go run ' .. input)
+				end
+			end,
+			desc = 'Test',
+		},
+
 		-- Windows
-		{ '<leader>wc', group = 'Chat' },
+		{ '<leader>wc',                                 group = 'Chat' },
 		{ '<leader>we', '<cmd>edit!<cr>',               desc = 'Reload buffer' },
 		{ '<leader>wh', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
 		{ '<leader>wj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
@@ -71,7 +101,6 @@ wk.add({
 		-- Copilot chat
 		--
 		-- https://github.com/CopilotC-Nvim/CopilotChat.nvim?tab=readme-ov-file#tips
-		{ '<leader>wc', group = 'Copilot' },
 		{ '<leader>wcd', '<cmd>CopilotChatDocs<cr>', desc = 'Document' },
 		{ '<leader>wce', '<cmd>CopilotChatExplain<cr>', desc = 'Explain' },
 		{ '<leader>wcf', '<cmd>CopilotChatFix<cr>', desc = 'Fix' },
@@ -101,35 +130,5 @@ wk.add({
 		{ '<leader>wcs', '<cmd>CopilotChatSave<cr>', desc = 'Save' },
 		{ '<leader>wct', '<cmd>CopilotChatTest<cr>', desc = 'Test' },
 		{ '<leader>wcv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
-
-		--- Golang
-		{ '<leader>xg', group = 'Golang' },
-		{ '<leader>xgf',
-			function()
-				local input = vim.fn.input('File/directory to format: ')
-				if input ~= '' then
-					vim.cmd('!go fmt ' .. input)
-				end
-			end,
-			desc = 'Format',
-		},
-		{ '<leader>xgr',
-			function()
-				local input = vim.fn.input('File/directory to run: ')
-				if input ~= '' then
-					vim.cmd('!go run ' .. input)
-				end
-			end,
-			desc = 'Run',
-		},
-		{ '<leader>xgt',
-			function()
-				local input = vim.fn.input('File/directory to test: ')
-				if input ~= '' then
-					vim.cmd('!go run ' .. input)
-				end
-			end,
-			desc = 'Test',
-		},
 	},
 })
