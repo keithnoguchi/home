@@ -138,6 +138,8 @@ wk.add({
 	{ '<leader>ws', '<c-w>s',                       desc = 'Split holizontally' },
 	{ '<leader>wv', '<c-w>v',                       desc = 'Split vertically' },
 	{ '<leader>wx', '<c-w>x<cr>',                   desc = 'Swap window' },
+	{ '<leader>w=', '<c-w>=<cr>',                   desc = 'Equal windows' },
+	{ '<leader>w|', '<c-w>|<cr>',                   desc = 'Maxout width' },
 
 	-- Copilot chat
 	--
