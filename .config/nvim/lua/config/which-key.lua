@@ -20,6 +20,7 @@ wk.add({
 	{ '<leader>q', '<cmd>q<cr>',              desc  = 'Quit' },
 	{ '<leader>r', '<cmd>luafile %<cr>',      desc  = 'Reload Luafile' },
 	{ '<leader>s', '<cmd>w!<cr>',             desc  = 'Save' },
+	{ '<leader>t',                            group = 'Tmux' },
 	{ '<leader>w',                            group = 'Window' },
 	{ '<leader>x',                            group = 'Execute' },
 	{ '<leader>z', '<c-z>',                   desc  = 'Suspend' },
@@ -88,6 +89,16 @@ wk.add({
 	{ '<leader>im', '<cmd>Telescope man_pages<cr>', desc = 'Man pages' },
 	{ '<leader>ir', '<cmd>Telescope registers<cr>', desc = 'Search registers' },
 	{ '<leader>is', '<cmd>nohlsearch<cr>',          desc = 'Clear search highlights' },
+
+	-- Tmux
+	{ '<leader>tc', '<cmd>!tmux list-clients<cr>',     desc = 'Clients' },
+	{ '<leader>th', '<cmd>!tmux split-window -v<cr>',  desc = 'Split holizontaly' },
+	{ '<leader>tn', '<cmd>!tmux switch-client -n<cr>', desc = 'Next session' },
+	{ '<leader>tl', '<cmd>!tmux ls<cr>',               desc = 'Sessions' },
+	{ '<leader>tp', '<cmd>!tmux switch-client -l<cr>', desc = 'Prev session' },
+	{ '<leader>tv', '<cmd>!tmux split-window -h<cr>',  desc = 'Split vertially' },
+	{ '<leader>tw', '<cmd>!tmux list-windows<cr>',     desc = 'Windows' },
+	{ '<leader>tz', '<cmd>!tmux resize-pane -Z<cr>',   desc = 'Maximize' },
 
 	-- Windows
 	{ '<leader>wc',                                 group = 'Chat' },
