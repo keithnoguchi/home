@@ -28,23 +28,32 @@ wk.add({
 		-- Most attributes can be inherited or overriden on an any level
 		-- There's no limit to the depth of nesting.
 		mode = { "n", "v" },
-		{ '<leader>d', '<cmd>bdelete<cr>',    desc = 'Kill buffer' },
-		{ '<leader>h', '<c-w>h',              desc = 'Move left' },
-		{ '<leader>j', '<c-w>j',              desc = 'Move down' },
-		{ '<leader>k', '<c-w>k',              desc = 'Move up' },
-		{ '<leader>l', '<c-w>l',              desc = 'Move right' },
-		{ '<leader>n', '<cmd>set number!<cr>',desc = 'Toggle line number' },
-		{ '<leader>p', '<cmd>Lazy<cr>',       desc = 'Plugin Manager' },
-		{ '<leader>q', '<cmd>q<cr>',          desc = 'Quit' },
-		{ '<leader>r', '<cmd>luafile %<cr>',  desc = 'Reload Luafile' },
-		{ '<leader>z', '<c-z>',               desc = 'Suspend' },
+		{ '<leader>c',                        group = 'Cargo' },
+		{ '<leader>d', '<cmd>bdelete<cr>',    desc  = 'Kill buffer' },
+		{ '<leader>h', '<c-w>h',              desc  = 'Move left' },
+		{ '<leader>j', '<c-w>j',              desc  = 'Move down' },
+		{ '<leader>k', '<c-w>k',              desc  = 'Move up' },
+		{ '<leader>l', '<c-w>l',              desc  = 'Move right' },
+		{ '<leader>n', '<cmd>set number!<cr>',desc  = 'Toggle line number' },
+		{ '<leader>p', '<cmd>Lazy<cr>',       desc  = 'Plugin Manager' },
+		{ '<leader>q', '<cmd>q<cr>',          desc  = 'Quit' },
+		{ '<leader>r', '<cmd>luafile %<cr>',  desc  = 'Reload Luafile' },
+		{ '<leader>w',                        group = 'Window' },
+		{ '<leader>x',                        group = 'Execute' },
+		{ '<leader>z', '<c-z>',               desc  = 'Suspend' },
 
 		-- Buffer navigation
 		{ '<leader><tab>', '<cmd>bnext<cr>',   desc = 'Next buffer' },
 		{ '<leader><s-tab>', '<cmd>bprev<cr>', desc = 'Previous buffer' },
 
+		--- Cargo/Rust
+		{ '<leader>cb', '<cmd>!cargo build<cr>', desc = 'Build' },
+		{ '<leader>cc', '<cmd>!cargo check<cr>', desc = 'Check' },
+		{ '<leader>cf', '<cmd>!cargo fmt<cr>',   desc = 'Format' },
+		{ '<leader>cr', '<cmd>!cargo run<cr>',   desc = 'Run' },
+		{ '<leader>ct', '<cmd>!cargo test<cr>',  desc = 'Test' },
+
 		-- Windows
-		{ '<leader>w',  group = 'Window' },
 		{ '<leader>wc', group = 'Chat' },
 		{ '<leader>we', '<cmd>edit!<cr>',               desc = 'Reload buffer' },
 		{ '<leader>wh', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
@@ -92,17 +101,6 @@ wk.add({
 		{ '<leader>wcs', '<cmd>CopilotChatSave<cr>', desc = 'Save' },
 		{ '<leader>wct', '<cmd>CopilotChatTest<cr>', desc = 'Test' },
 		{ '<leader>wcv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
-
-		-- Executions
-		{ '<leader>x', group = 'Execute' },
-
-		--- Rust
-		{ '<leader>xc', group = 'Cargo' },
-		{ '<leader>xcb', '<cmd>!cargo build<cr>', desc = "Build" },
-		{ '<leader>xcc', '<cmd>!cargo check<cr>', desc = "Check" },
-		{ '<leader>xcf', '<cmd>!cargo fmt<cr>', desc = "Format" },
-		{ '<leader>xcr', '<cmd>!cargo run<cr>', desc = "Run" },
-		{ '<leader>xct', '<cmd>!cargo test<cr>', desc = "Test" },
 
 		--- Golang
 		{ '<leader>xg', group = 'Golang' },
