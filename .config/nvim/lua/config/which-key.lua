@@ -82,10 +82,10 @@ wk.add({
 		-- Windows
 		{ '<leader>w', group = 'Window' },
 		{ '<leader>we', '<cmd>edit!<cr>',               desc = 'Reload buffer' },
-		{ '<leader>wh', '<cmd>vertical resize +10<cr>', desc = 'Expand width' },
+		{ '<leader>wh', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
 		{ '<leader>wj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
 		{ '<leader>wk', '<cmd>resize -10<cr>',          desc = 'Shrink hight' },
-		{ '<leader>wl', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
+		{ '<leader>wl', '<cmd>vertical resize +10<cr>', desc = 'Expand width' },
 		{ '<leader>wn', '<cmd>set number!<cr>',         desc = 'Toggle line number' },
 		{ '<leader>wo', '<c-w>o',                       desc = 'Single window' },
 		{ '<leader>wq', '<c-w>q<cr>',                   desc = 'Quit window' },
