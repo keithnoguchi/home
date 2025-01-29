@@ -1,16 +1,6 @@
 -- https://github.com/folke/which-key.nvim
 local wk = require("which-key")
 wk.add({
-	-- File exploring with NvimTree
-
-	-- File operations
-	{ "<leader>f", group = "File" },
-	{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-	{ "<leader>fc", "<cmd>Telescope colorscheme<cr>", desc = "Color scheme" },
-	{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-	{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
-	{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
-
 	-- Normal and view mode.
 	{
 		-- Nested mappings are allowed and can be added in any order
@@ -19,7 +9,8 @@ wk.add({
 		mode = { "n", "v" },
 		{ '<leader>c',                        group = 'Cargo' },
 		{ '<leader>d', '<cmd>bdelete<cr>',    desc  = 'Kill buffer' },
-		{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explore" },
+		{ '<leader>e', '<cmd>NvimTreeToggle<cr>', desc = 'Explore' },
+		{ '<leader>f',                        group = 'File' },
 		{ '<leader>g',                        group = 'Golang' },
 		{ '<leader>h', '<c-w>h',              desc  = 'Move left' },
 		{ '<leader>i',                        group = 'Info' },
@@ -54,6 +45,13 @@ wk.add({
 		{ '<leader>cf', '<cmd>!cargo fmt<cr>',   desc = 'Format' },
 		{ '<leader>cr', '<cmd>!cargo run<cr>',   desc = 'Run' },
 		{ '<leader>ct', '<cmd>!cargo test<cr>',  desc = 'Test' },
+
+		-- File operations
+		{ '<leader>fb', '<cmd>Telescope buffers<cr>',     desc = 'Buffers' },
+		{ '<leader>fc', '<cmd>Telescope colorscheme<cr>', desc = 'Color scheme' },
+		{ '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Find files' },
+		{ '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Live grep' },
+		{ '<leader>fh', '<cmd>Telescope help_tags<cr>', desc = 'Help tags' },
 
 		--- Golang
 		{ '<leader>gf',
