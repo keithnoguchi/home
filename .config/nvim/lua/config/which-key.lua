@@ -42,7 +42,7 @@ wk.add({
 	{ '<leader>cb', '<cmd>!cargo build<cr>', desc = 'Build' },
 	{ '<leader>cc', '<cmd>!cargo check<cr>', desc = 'Check' },
 	{ '<leader>cf', '<cmd>!cargo fmt<cr>',   desc = 'Format' },
-	{ '<leader>ct', '<cmd>!cargo test<cr>',  desc = 'Test' },
+	{ '<leader>cv', '<cmd>!cargo test<cr>',  desc = 'Test' },
 	{ '<leader>cx', '<cmd>!cargo run<cr>',   desc = 'Run' },
 
 	-- File operations
@@ -62,7 +62,7 @@ wk.add({
 		end,
 		desc = 'Format',
 	},
-	{ '<leader>gt',
+	{ '<leader>gv',
 		function()
 			local input = vim.fn.input('File/directory to test: ')
 			if input ~= '' then
