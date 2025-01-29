@@ -69,12 +69,10 @@ wk.add({
 		{ '<leader>j', '<c-w>j',              desc = 'Move down' },
 		{ '<leader>k', '<c-w>k',              desc = 'Move up' },
 		{ '<leader>l', '<c-w>l',              desc = 'Move right' },
-		{ '<leader>o', '<c-w>o',              desc = 'Single window' },
+		{ '<leader>n', '<cmd>set number!<cr>',desc = 'Toggle line number' },
 		{ '<leader>p', '<cmd>Lazy<cr>',       desc = 'Plugin Manager' },
 		{ '<leader>q', '<cmd>q<cr>',          desc = 'Quit' },
 		{ '<leader>r', '<cmd>luafile %<cr>',  desc = 'Reload Luafile' },
-		{ '<leader>v', '<c-w>v',              desc = 'Split vertically' },
-		{ '<leader>-', '<c-w>s',              desc = 'Split holizontally' },
 		{ '<leader>z', '<c-z>',               desc = 'Suspend' },
 
 		-- Buffer navigation
@@ -88,9 +86,12 @@ wk.add({
 		{ '<leader>wj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
 		{ '<leader>wk', '<cmd>resize -10<cr>',          desc = 'Shrink hight' },
 		{ '<leader>wl', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
+		{ '<leader>wn', '<cmd>set number!<cr>',         desc = 'Toggle line number' },
+		{ '<leader>wo', '<c-w>o',                       desc = 'Single window' },
 		{ '<leader>wq', '<c-w>q<cr>',                   desc = 'Quit window' },
-		{ '<leader>ws', '<cmd>w!<cr>',                  desc = 'Save buffer' },
-		{ '<leader>ww', '<c-w>w<cr>',                   desc = 'Switch window' },
+		{ '<leader>ws', '<c-w>s',                       desc = 'Split holizontally' },
+		{ '<leader>wv', '<c-w>v',                       desc = 'Split vertically' },
+		{ '<leader>ww', '<cmd>w!<cr>',                  desc = 'Save window' },
 		{ '<leader>wx', '<c-w>x<cr>',                   desc = 'Swap window' },
 
 		-- Executions
