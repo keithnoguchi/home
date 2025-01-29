@@ -2,7 +2,6 @@
 local wk = require("which-key")
 wk.add({
 	-- File exploring with NvimTree
-	{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explore" },
 
 	-- File operations
 	{ "<leader>f", group = "File" },
@@ -20,6 +19,7 @@ wk.add({
 		mode = { "n", "v" },
 		{ '<leader>c',                        group = 'Cargo' },
 		{ '<leader>d', '<cmd>bdelete<cr>',    desc  = 'Kill buffer' },
+		{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Explore" },
 		{ '<leader>g',                        group = 'Golang' },
 		{ '<leader>h', '<c-w>h',              desc  = 'Move left' },
 		{ '<leader>i',                        group = 'Info' },
