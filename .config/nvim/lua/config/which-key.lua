@@ -92,13 +92,38 @@ wk.add({
 
 	-- Tmux
 	{ '<leader>tc', '<cmd>!tmux list-clients<cr>',     desc = 'Clients' },
-	{ '<leader>th', '<cmd>!tmux split-window -v<cr>',  desc = 'Split holizontaly' },
-	{ '<leader>tn', '<cmd>!tmux switch-client -n<cr>', desc = 'Next session' },
+	{ '<leader>th',
+		function()
+			vim.fn.system('tmux split-window -v')
+		end,
+		desc = 'Split holizontaly',
+	},
+	{ '<leader>tn',
+		function()
+			vim.fn.system('tmux switch-client -n')
+		end,
+		desc = 'Next session'
+	},
 	{ '<leader>tl', '<cmd>!tmux ls<cr>',               desc = 'Sessions' },
-	{ '<leader>tp', '<cmd>!tmux switch-client -l<cr>', desc = 'Prev session' },
-	{ '<leader>tv', '<cmd>!tmux split-window -h<cr>',  desc = 'Split vertially' },
+	{ '<leader>tp',
+		function()
+			vim.fn.system('tmux switch-client -l')
+		end,
+		desc = 'Prev session'
+	},
+	{ '<leader>tv',
+		function()
+			vim.fn.system('tmux split-window -h')
+		end,
+		desc = 'Split vertically',
+	},
 	{ '<leader>tw', '<cmd>!tmux list-windows<cr>',     desc = 'Windows' },
-	{ '<leader>tz', '<cmd>!tmux resize-pane -Z<cr>',   desc = 'Maximize' },
+	{ '<leader>tz',
+		function()
+			vim.fn.system('tmux resize-pane -Z')
+		end,
+		desc = 'Maximize pane',
+	},
 
 	-- Windows
 	{ '<leader>wc',                                 group = 'Chat' },
