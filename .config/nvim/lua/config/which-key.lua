@@ -48,6 +48,15 @@ wk.add({
 		{ '<leader><s-tab>', '<cmd>bprev<cr>', desc = 'Previous buffer' },
 
 		--- Cargo/Rust
+		{ '<leader>ca',
+			function()
+				local input = vim.fn.input('Crate: ')
+				if input ~= '' then
+					vim.cmd('!cargo add ' .. input)
+				end
+			end,
+			desc = 'Crate',
+		},
 		{ '<leader>cb', '<cmd>!cargo build<cr>', desc = 'Build' },
 		{ '<leader>cc', '<cmd>!cargo check<cr>', desc = 'Check' },
 		{ '<leader>cf', '<cmd>!cargo fmt<cr>',   desc = 'Format' },
