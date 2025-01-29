@@ -42,8 +42,8 @@ wk.add({
 	{ '<leader>cb', '<cmd>!cargo build<cr>', desc = 'Build' },
 	{ '<leader>cc', '<cmd>!cargo check<cr>', desc = 'Check' },
 	{ '<leader>cf', '<cmd>!cargo fmt<cr>',   desc = 'Format' },
-	{ '<leader>cr', '<cmd>!cargo run<cr>',   desc = 'Run' },
 	{ '<leader>ct', '<cmd>!cargo test<cr>',  desc = 'Test' },
+	{ '<leader>cx', '<cmd>!cargo run<cr>',   desc = 'Run' },
 
 	-- File operations
 	{ '<leader>fb', '<cmd>Telescope buffers<cr>',     desc = 'Buffers' },
@@ -62,15 +62,6 @@ wk.add({
 		end,
 		desc = 'Format',
 	},
-	{ '<leader>gr',
-		function()
-			local input = vim.fn.input('File/directory to run: ')
-			if input ~= '' then
-				vim.cmd('!go run ' .. input)
-			end
-		end,
-		desc = 'Run',
-	},
 	{ '<leader>gt',
 		function()
 			local input = vim.fn.input('File/directory to test: ')
@@ -79,6 +70,15 @@ wk.add({
 			end
 		end,
 		desc = 'Test',
+	},
+	{ '<leader>gx',
+		function()
+			local input = vim.fn.input('File/directory to run: ')
+			if input ~= '' then
+				vim.cmd('!go run ' .. input)
+			end
+		end,
+		desc = 'Run',
 	},
 
 	-- Info
