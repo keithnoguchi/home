@@ -4,8 +4,8 @@ cmp.setup{
 	mapping = cmp.mapping.preset.insert({
 		['<c-space>'] = cmp.mapping.complete(),
 		['<tab>'] = cmp.mapping.confirm({ select = true }),
-		['<c-b>'] = cmp.mapping.scroll_docs(-4),
-		['<c-f>'] = cmp.mapping.scroll_docs(4),
+		['<c-b>'] = cmp.mapping.scroll_docs(-15),
+		['<c-f>'] = cmp.mapping.scroll_docs(15),
 	}),
 	sorting = {
 		priority_weight = 2,
