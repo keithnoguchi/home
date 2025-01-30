@@ -39,11 +39,12 @@ wk.add({
 		end,
 		desc = 'Crate',
 	},
-	{ '<leader>cb', '<cmd>!cargo build<cr>', desc = 'Build' },
-	{ '<leader>cc', '<cmd>!cargo check<cr>', desc = 'Check' },
-	{ '<leader>cf', '<cmd>!cargo fmt<cr>',   desc = 'Format' },
-	{ '<leader>cv', '<cmd>!cargo test<cr>',  desc = 'Test' },
-	{ '<leader>cx', '<cmd>!cargo run<cr>',   desc = 'Run' },
+	{ '<leader>cb', '<cmd>!cargo build<cr>',           desc = 'Build' },
+	{ '<leader>cc', '<cmd>!cargo check<cr>',           desc = 'Check' },
+	{ '<leader>cf', '<cmd>!cargo fmt<cr>',             desc = 'Format' },
+	{ '<leader>cr', '<cmd>!cargo build --release<cr>', desc = 'Release build' },
+	{ '<leader>cv', '<cmd>!cargo test<cr>',            desc = 'Test' },
+	{ '<leader>cx', '<cmd>!cargo run<cr>',             desc = 'Run' },
 
 	-- File operations
 	{ '<leader>fb', '<cmd>Telescope buffers<cr>',     desc = 'Buffers' },
