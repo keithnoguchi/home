@@ -22,7 +22,7 @@ wk.add({
 	{ '<leader>s', '<cmd>w!<cr>',             desc  = 'Save' },
 	{ '<leader>t',                            group = 'Tmux' },
 	{ '<leader>w',                            group = 'Window' },
-	{ '<leader>x',                            group = 'Execute' },
+	{ '<leader>x', '<cmd>split|terminal<cr>', desc  = 'Terminal' },
 	{ '<leader>z', '<c-z>',                   desc  = 'Suspend' },
 
 	-- Buffer navigation
