@@ -49,10 +49,10 @@ export ANSIBLE_NOCOWS=true
 #export CURL_CA_BUNDLE=${HOME}/.curl/cacert.pem
 
 # SSH agent
-if ! pgrep -u "$USER" ssh-agent >/dev/null; then
-	ssh-agent > ~/.ssh-agent-thing
+if [ -z $SSH_AUTH_SOCK ]; then
+	eval `ssh-agent -s`
+	ssh-add
 fi
-eval $(ssh-agent)
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/src/google-cloud-sdk/path.bash.inc" ]; then
