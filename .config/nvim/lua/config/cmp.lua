@@ -44,3 +44,12 @@ cmp.setup.filetype('rust', {
 		{ name = 'nvim_lsp', group_index = 1},
 	}),
 })
+
+-- Disable completion in the terminal mode
+vim.cmd([[
+	augroup DisableCopilotInTerminal
+		autocmd!
+		autocmd TermOpen * lua require('cmp').setup.buffer { enabled = false }
+		autocmd TermClose * lua require('cmp').setup.buffer { enabled = true }
+	augroup END
+]])
