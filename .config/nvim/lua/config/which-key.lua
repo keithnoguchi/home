@@ -25,6 +25,12 @@ wk.add({
 	{ '<leader>x', '<cmd>15split|terminal<cr>', desc  = 'Terminal' },
 	{ '<leader>z', '<c-z>',                     desc  = 'Suspend' },
 
+	{
+		-- terminal mode mappings.
+		mode = { 't' },
+		{ '<c-q>', '<c-\\><c-n>', desc  = 'Exit' },
+	},
+
 	-- Buffer navigation
 	{ '<tab>',   '<cmd>bnext<cr>', desc = 'Next buffer' },
 	{ '<s-tab>', '<cmd>bprev<cr>', desc = 'Previous buffer' },
