@@ -12,6 +12,7 @@
 .irssi/
 .local/
 .rustup/
+.sfcompute/
 .surf/
 .mutt/
 .gnupg/
