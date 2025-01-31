@@ -12,6 +12,11 @@ export EDITOR=vim
 export TERM=xterm-color
 export LC_CTYPE="en_US.UTF-8"
 
+# Local path.
+#
+# I need to clean all those path management.
+export PATH=$HOME/.local/bin:$PATH
+
 # Solana
 export PATH=$HOME/.local/share/solana/install/active_release/bin:$PATH
 
