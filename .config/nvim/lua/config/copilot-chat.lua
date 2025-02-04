@@ -12,8 +12,8 @@ cc.setup({
 			insert = '<c-q>',
 		},
 		reset = {
-			normal = '<c-c>',
-			insert = '<c-c>',
+			normal = '<l>',
+			insert = '<c-l>',
 		},
 		submit_prompt = {
 			normal = '<cr>',
