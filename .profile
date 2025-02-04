@@ -1,60 +1,48 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Load shell functions
-source ~/lib/.config
-
-# https://github.com/ahmetb/kubectl-aliases
-source ~/.kubectl_aliases
-
-# Default settings
+# Environment variables
 export PS1='\$ '
-export EDITOR=vim
+export EDITOR=nvim
 export TERM=xterm-color
 export LC_CTYPE="en_US.UTF-8"
+export RUST_BACKTRACE=0
+export GOPATH=$HOME
+export ANSIBLE_NOCOWS=true
+export PGHOST=localhost
+export PGPORT=16000
+export PGUSER=postgres
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-# Local path.
-#
-# I need to clean all those path management.
-export PATH=$HOME/.local/bin:$PATH
+# PATH push head
+PATH=$GOPATH/bin:$PATH
+PATH=$HOME/.cargo/bin:$PATH
+PATH=$HOME/.local/bin:$PATH
 
-# Solana
-export PATH=$HOME/.local/share/solana/install/active_release/bin:$PATH
+# PATH push tail
+PATH=$PATH:$HOME/.local/share/solana/install/active_release/bin
+PATH=$PATH:$HOME/.yarn/bin
+PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
+PATH=$PATH:$HOME/node_modules/.bin
+PATH=$PATH:/usr/share/bcc/tools
+PATH=$PATH:/usr/share/bpftrace/tools
+PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
 
 # Rust
-export PATH=$PATH:$HOME/.cargo/bin
-export RUST_BACKTRACE=0
-
-# JavaScript
-export PATH=$PATH:$HOME/.yarn/bin
-export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
-export PATH=$PATH:$HOME/node_modules/.bin
-
-# Postgres local development
-export PGHOST=127.0.0.1
-export PGUSER=postgres
-
-# bcc/bpftrace
-export PATH=$PATH:/usr/share/bcc/tools
-export PATH=$PATH:/usr/share/bpftrace/tools
-
-# Golang
-export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin
-
-# Ruby
-export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
-
-# For Ansible
-export ANSIBLE_NOCOWS=true
-
-# cURL
-#export CURL_CA_BUNDLE=${HOME}/.curl/cacert.pem
+source $HOME/.cargo/env
 
 # SSH agent
 if [ -z $SSH_AUTH_SOCK ]; then
 	eval `ssh-agent -s`
 	ssh-add
 fi
+
+# For GPG key for git signing
+# https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
+export GPG_TTY=$(tty)
+
+# Load shell functions
+source ~/lib/.config
+
+# https://github.com/ahmetb/kubectl-aliases
+source ~/.kubectl_aliases
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/src/google-cloud-sdk/path.bash.inc" ]; then
@@ -66,10 +54,4 @@ if [ -f "$HOME/src/google-cloud-sdk/completion.bash.inc" ]; then
 	. "$HOME/src/google-cloud-sdk/completion.bash.inc"
 fi
 
-# For GPG key for git signing
-# https://help.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key
-export GPG_TTY=$(tty)
 
-export PGHOST=localhost
-export PGPORT=16000
-export PGUSER=postgres
