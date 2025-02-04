@@ -33,9 +33,6 @@ export PATH=$PATH:$HOME/node_modules/.bin
 export PGHOST=127.0.0.1
 export PGUSER=postgres
 
-# Python
-export PATH=$PATH:$HOME/.local/bin
-
 # bcc/bpftrace
 export PATH=$PATH:/usr/share/bcc/tools
 export PATH=$PATH:/usr/share/bpftrace/tools
