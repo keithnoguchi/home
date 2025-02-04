@@ -1,1 +1,2 @@
 . ~/.profile
+. "$HOME/.cargo/env"
