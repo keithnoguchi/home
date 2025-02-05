@@ -157,12 +157,13 @@ wk.add({
 	{ '<leader>wl', '<cmd>vertical resize +10<cr>', desc = 'Expand width' },
 	{ '<leader>wn', '<cmd>set number!<cr>',         desc = 'Toggle line number' },
 	{ '<leader>wo', '<c-w>o',                       desc = 'Single window' },
-	{ '<leader>wq', '<c-w>q<cr>',                   desc = 'Quit window' },
+	{ '<leader>wq', '<c-w>q',                       desc = 'Quit window' },
 	{ '<leader>ws', '<c-w>s',                       desc = 'Split holizontally' },
 	{ '<leader>wv', '<c-w>v',                       desc = 'Split vertically' },
-	{ '<leader>wx', '<c-w>x<cr>',                   desc = 'Swap window' },
-	{ '<leader>w=', '<c-w>=<cr>',                   desc = 'Equal windows' },
-	{ '<leader>w|', '<c-w>|<cr>',                   desc = 'Maxout width' },
+	{ '<leader>wx', '<cmd>tabclose<cr>',            desc = 'Close tab' },
+	{ '<leader>wz', '<cmd>tab split<cr>',           desc = 'Enlarge window' },
+	{ '<leader>w=', '<c-w>=',                       desc = 'Equal windows' },
+	{ '<leader>w|', '<c-w>|',                       desc = 'Maxout width' },
 
 	-- Copilot chat
 	--
