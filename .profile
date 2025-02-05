@@ -1,15 +1,15 @@
 # Environment variables
-export PS1='\$ '
-export EDITOR=nvim
-export TERM=xterm-color
-export LC_CTYPE="en_US.UTF-8"
-export RUST_BACKTRACE=0
-export GOPATH=$HOME
 export ANSIBLE_NOCOWS=true
+export EDITOR=nvim
+export GOPATH=$HOME
+export LC_CTYPE="en_US.UTF-8"
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PGHOST=localhost
 export PGPORT=16000
 export PGUSER=postgres
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PS1='\$ '
+export RUST_BACKTRACE=1
+export TERM=xterm-color
 
 # PATH push head
 PATH=$GOPATH/bin:$PATH
