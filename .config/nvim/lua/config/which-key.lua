@@ -149,7 +149,7 @@ wk.add({
 	},
 
 	-- Windows
-	{ '<leader>wc',                                 group = 'Chat' },
+	{ '<leader>wc',                                 group = 'Copilot' },
 	{ '<leader>we', '<cmd>edit!<cr>',               desc = 'Reload buffer' },
 	{ '<leader>wh', '<cmd>vertical resize -10<cr>', desc = 'Shrink width' },
 	{ '<leader>wj', '<cmd>resize +10<cr>',          desc = 'Expand hight' },
