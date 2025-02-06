@@ -11,11 +11,14 @@ export PS1='\$ '
 export RUST_BACKTRACE=1
 export TERM=xterm-color
 
+if [ "$(uname)" = "Darwin" ]; then
+	PATH=/opt/homebrew/bin:$PATH
+fi
+
 # PATH push head
 PATH=$GOPATH/bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
 PATH=$HOME/.local/bin:$PATH
-
 # PATH push tail
 PATH=$PATH:$HOME/.local/share/solana/install/active_release/bin
 PATH=$PATH:$HOME/.yarn/bin
@@ -53,5 +56,3 @@ fi
 if [ -f "$HOME/src/google-cloud-sdk/completion.bash.inc" ]; then
 	. "$HOME/src/google-cloud-sdk/completion.bash.inc"
 fi
-
-
