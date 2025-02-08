@@ -9,6 +9,7 @@
 .config/dconf/
 .config/github-copilot/
 .config/htop/
+.config/pulse/
 .docker/
 .gnupg/
 .irssi/
