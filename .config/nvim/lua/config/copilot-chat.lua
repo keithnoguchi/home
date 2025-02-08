@@ -6,6 +6,9 @@ cc.setup({
 		width = 0.35,
 	},
 	allow_insecure = false,
+	accept_diff = true,
+	question_header = ' keith ',
+	answer_header = ' ryu ',
 	mappings = {
 		close = {
 			normal = 'q',
@@ -18,6 +21,10 @@ cc.setup({
 		submit_prompt = {
 			normal = '<cr>',
 			insert = '<c-j>',
+		},
+		accept_diff = {
+			normal = '<c-d>',
+			insert = '<c-d>',
 		},
 	},
 })
