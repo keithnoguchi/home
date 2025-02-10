@@ -52,7 +52,14 @@ wk.add({
 	{ '<leader>cf', '<cmd>!cargo fmt<cr>',             desc = 'Format' },
 	{ '<leader>cr', '<cmd>!cargo build --release<cr>', desc = 'Release build' },
 	{ '<leader>cv', '<cmd>!cargo test<cr>',            desc = 'Test' },
+	{ '<leader>cw', 						           group = 'Workspace' },
 	{ '<leader>cx', '<cmd>!cargo run<cr>',             desc = 'Run' },
+
+	-- cargo workspace
+	{ '<leader>cwb', '<cmd>!cargo build --workspace<cr>',           desc = 'Build' },
+	{ '<leader>cwc', '<cmd>!cargo check --workspace<cr>',           desc = 'Check' },
+	{ '<leader>cwr', '<cmd>!cargo build --workspace --release<cr>', desc = 'Release build' },
+	{ '<leader>cwv', '<cmd>!cargo test --workspace<cr>',            desc = 'Test' },
 
 	-- File operations
 	{ '<leader>fb', '<cmd>Telescope buffers<cr>',     desc = 'Buffers' },
@@ -75,7 +82,7 @@ wk.add({
 		function()
 			local input = vim.fn.input('File/directory to test: ')
 			if input ~= '' then
-				vim.cmd('!go run ' .. input)
+				vim.cmd('!go test ' .. input)
 			end
 		end,
 		desc = 'Test',
