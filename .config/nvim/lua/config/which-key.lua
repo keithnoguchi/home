@@ -34,8 +34,8 @@ wk.add({
 	-- Buffer navigation
 	{ '<tab>',   '<cmd>bnext<cr>', desc = 'Next buffer' },
 	{ '<s-tab>', '<cmd>bprev<cr>', desc = 'Previous buffer' },
-	{ '<c-j>',   '<cmd>bnext<cr>', desc = 'Next buffer' },
-	{ '<c-k>',   '<cmd>bprev<cr>', desc = 'Previous buffer' },
+	{ '<s-j>',   '<cmd>bnext<cr>', desc = 'Next buffer' },
+	{ '<s-k>',   '<cmd>bprev<cr>', desc = 'Previous buffer' },
 
 	--- Cargo/Rust
 	{ '<leader>ca',
@@ -109,13 +109,13 @@ wk.add({
 	-- Tmux
 	{ '<leader>ts',                       group = 'Sessions' },
 	{ '<leader>tsl', '<cmd>!tmux ls<cr>', desc = 'List sessions' },
-	{ '<leader>tsn',
+	{ '<leader>tsj',
 		function()
 			vim.fn.system('tmux switch-client -n')
 		end,
 		desc = 'Next session'
 	},
-	{ '<leader>tsp',
+	{ '<leader>tsk',
 		function()
 			vim.fn.system('tmux switch-client -p')
 		end,
@@ -130,13 +130,13 @@ wk.add({
 		end,
 		desc = 'Split window holizontaly',
 	},
-	{ '<leader>twn',
+	{ '<leader>twj',
 		function()
 			vim.fn.system('tmux next-window')
 		end,
 		desc  = 'Next window',
 	},
-	{ '<leader>twp',
+	{ '<leader>twk',
 		function()
 			vim.fn.system('tmux previous-window')
 		end,
