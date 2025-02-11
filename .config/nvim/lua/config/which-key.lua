@@ -22,7 +22,7 @@ wk.add({
 	{ '<leader>s', '<cmd>w!<cr>',               desc  = 'Save' },
 	{ '<leader>t',                              group = 'Tmux' },
 	{ '<leader>w',                              group = 'Window' },
-	{ '<leader>x', '<cmd>15split|terminal<cr>', desc  = 'Terminal' },
+	{ '<leader>x',                              group = 'Terminal' },
 	{ '<leader>z', '<c-z>',                     desc  = 'Suspend' },
 
 	{
@@ -225,4 +225,8 @@ wk.add({
 	{ '<leader>wcs', '<cmd>CopilotChatSave<cr>', desc = 'Save' },
 	{ '<leader>wct', '<cmd>CopilotChatTest<cr>', desc = 'Test' },
 	{ '<leader>wcv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
+
+	-- Terminal
+	{ '<leader>xh', '<cmd>15split|terminal<cr>', desc  = 'Holizontal terminal' },
+	{ '<leader>xv', '<cmd>20vsplit|terminal<cr>', desc  = 'Vertical terminal' },
 })
