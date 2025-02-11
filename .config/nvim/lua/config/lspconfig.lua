@@ -4,14 +4,13 @@ local lsp = require('lspconfig')
 -- C/C++
 lsp.clangd.setup{
 	cmd = {
-		'clangd',
-		'--background-index',
-		'--clang-tidy',
-		'--completion-style=detailed',
-		'--header-insertion=never',
+		'ccls',
 	},
 	filetypes = { 'c', 'cpp' },
 	root_dir = lsp.util.root_pattern('compile_commands.json', 'compile_flags.txt', '.git'),
+	init_options = {
+		highlight = { lsRanges = true },
+	},
 }
 
 -- Rust
