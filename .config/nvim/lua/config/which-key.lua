@@ -108,7 +108,6 @@ wk.add({
 
 	-- Tmux
 	{ '<leader>ts',                       group = 'Sessions' },
-	{ '<leader>tsl', '<cmd>!tmux ls<cr>', desc = 'List sessions' },
 	{ '<leader>tsj',
 		function()
 			vim.fn.system('tmux switch-client -n')
@@ -120,6 +119,28 @@ wk.add({
 			vim.fn.system('tmux switch-client -p')
 		end,
 		desc = 'Prev session'
+	},
+	{ '<leader>tsl', '<cmd>!tmux ls<cr>', desc = 'List sessions' },
+	{ '<leader>tsn',
+		function()
+			local session_name = vim.fn.input('Session name: ')
+			if session_name ~= '' then
+				vim.fn.system('tmux new-session -d -s ' .. session_name)
+				print('Created new session: ' .. session_name)
+			end
+		end,
+		desc = 'New session'
+	},
+	{ '<leader>tsq',
+		function()
+			local session_name = vim.fn.input('Session name: ')
+			if session_name ~= '' then
+				vim.fn.system('tmux kill-session -t ' .. session_name)
+			else
+				vim.fn.system('tmux kill-session')
+			end
+		end,
+		desc = 'Kill session'
 	},
 
 	{ '<leader>tw',                                 group = 'Windows' },
