@@ -4,13 +4,22 @@ local lsp = require('lspconfig')
 -- C/C++
 lsp.clangd.setup{
 	cmd = {
-		'ccls',
+		'clangd',
+		'--background-index',
+		'--background-index-priority=background',
+		'--clang-tidy',
+		'--completion-style=detailed',
+		'--header-insertion=never',
+		'-j=1',
+		'--limit-results=10',
+		'--limit-references=10',
+		'--all-scopes-completion=false',
+		'--log=error',
+		'--malloc-trim',
+		'--pch-storage=memory',
 	},
 	filetypes = { 'c', 'cpp' },
 	root_dir = lsp.util.root_pattern('compile_commands.json', 'compile_flags.txt', '.git'),
-	init_options = {
-		highlight = { lsRanges = true },
-	},
 }
 
 -- Rust
