@@ -228,5 +228,5 @@ wk.add({
 
 	-- Terminal
 	{ '<leader>xh', '<cmd>15split|terminal<cr>', desc  = 'Holizontal terminal' },
-	{ '<leader>xv', '<cmd>20vsplit|terminal<cr>', desc  = 'Vertical terminal' },
+	{ '<leader>xv', '<cmd>80vsplit|terminal<cr>', desc  = 'Vertical terminal' },
 })
