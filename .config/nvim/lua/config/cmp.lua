@@ -4,6 +4,8 @@ cmp.setup{
 	mapping = cmp.mapping.preset.insert({
 		['<c-space>'] = cmp.mapping.complete(),
 		['<tab>'] = cmp.mapping.confirm({ select = true }),
+		['<c-j>'] = cmp.mapping.select_next_item(),
+		['<c-k>'] = cmp.mapping.select_prev_item(),
 		['<c-b>'] = cmp.mapping.scroll_docs(-15),
 		['<c-e>'] = cmp.mapping.scroll_docs(1),
 		['<c-f>'] = cmp.mapping.scroll_docs(15),
