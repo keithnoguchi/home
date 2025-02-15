@@ -226,6 +226,6 @@ wk.add({
 	{ '<leader>wcv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
 
 	-- Terminal
-	{ '<leader>xh', '<cmd>15split|terminal<cr>', desc  = 'Holizontal terminal' },
-	{ '<leader>xv', '<cmd>80vsplit|terminal<cr>', desc  = 'Vertical terminal' },
+	{ '<leader>xh', '<cmd>split|terminal<cr>', desc  = 'Holizontal terminal' },
+	{ '<leader>xv', '<cmd>vsplit|terminal<cr>', desc  = 'Vertical terminal' },
 })
