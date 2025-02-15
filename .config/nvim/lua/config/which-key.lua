@@ -62,11 +62,11 @@ wk.add({
 	{ '<leader>cwv', '<cmd>!cargo test --workspace<cr>',            desc = 'Test' },
 
 	-- File operations
-	{ '<leader>fb', '<cmd>Telescope buffers<cr>',     desc = 'Buffers' },
 	{ '<leader>fc', '<cmd>Telescope colorscheme<cr>', desc = 'Color scheme' },
 	{ '<leader>ff', '<cmd>Telescope find_files<cr>',  desc = 'Find files' },
 	{ '<leader>fg', '<cmd>Telescope live_grep<cr>',   desc = 'Live grep' },
 	{ '<leader>fh', '<cmd>Telescope help_tags<cr>',   desc = 'Help tags' },
+	{ '<leader>fv', '<cmd>Telescope buffers<cr>',     desc = 'Buffers' },
 
 	--- Golang
 	{ '<leader>gf',
