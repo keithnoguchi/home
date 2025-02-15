@@ -8,7 +8,7 @@ cc.setup({
 	allow_insecure = false,
 	accept_diff = true,
 	question_header = ' keith ',
-	answer_header = ' ryu ',
+	answer_header = ' tank ',
 	mappings = {
 		close = {
 			normal = 'q',
