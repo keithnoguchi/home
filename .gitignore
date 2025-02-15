@@ -8,6 +8,7 @@
 .cargo/
 .config/dconf/
 .config/github-copilot/
+.config/go/
 .config/htop/
 .config/pulse/
 .docker/
