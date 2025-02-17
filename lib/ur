@@ -1,0 +1,4 @@
+# vi:filetype=sh
+
+## ur for uname -r
+ur() { uname -r "$@"; }
