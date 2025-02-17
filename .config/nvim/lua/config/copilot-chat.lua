@@ -7,12 +7,12 @@ cc.setup({
 	},
 	allow_insecure = false,
 	accept_diff = true,
-	question_header = ' keith ',
-	answer_header = ' mr. wizard ',
+	question_header = ' me ',
+	answer_header = ' Mr. Wizard ',
 	mappings = {
 		close = {
-			normal = 'q',
-			insert = '<c-q>',
+			normal = 'd',
+			insert = '<c-d>',
 		},
 		reset = {
 			normal = '<l>',
@@ -23,8 +23,8 @@ cc.setup({
 			insert = '<c-j>',
 		},
 		accept_diff = {
-			normal = '<c-d>',
-			insert = '<c-d>',
+			normal = '<c-a>',
+			insert = '<c-a>',
 		},
 	},
 })
