@@ -49,7 +49,7 @@ wk.add({
 	},
 	{ '<leader>cb', '<cmd>!cargo build<cr>',           desc = 'Build' },
 	{ '<leader>cc', '<cmd>!cargo check<cr>',           desc = 'Check' },
-	{ '<leader>cf', '<cmd>!cargo fmt<cr>',             desc = 'Format' },
+	{ '<leader>cf', '<cmd>silent !cargo fmt<cr>',      desc = 'Format' },
 	{ '<leader>cr', '<cmd>!cargo build --release<cr>', desc = 'Release build' },
 	{ '<leader>cv', '<cmd>!cargo test<cr>',            desc = 'Test' },
 	{ '<leader>cw', 						           group = 'Workspace' },
