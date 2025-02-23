@@ -1,25 +1,21 @@
 # Environment variables
-export ANSIBLE_NOCOWS=true
 export EDITOR=nvim
 export GOPATH=$HOME
 export LC_CTYPE="en_US.UTF-8"
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-export PGHOST=localhost
-export PGPORT=16000
-export PGUSER=postgres
 export PS1='\$ '
 export RUST_BACKTRACE=1
 export TERM=xterm-color
 
+# PATH environment variable
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 if [ "$(uname)" = "Darwin" ]; then
 	PATH=/opt/homebrew/bin:$PATH
 fi
-
-# PATH push head
+# push head
 PATH=$GOPATH/bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
 PATH=$HOME/.local/bin:$PATH
-# PATH push tail
+# push tail
 PATH=$PATH:$HOME/.local/share/solana/install/active_release/bin
 PATH=$PATH:$HOME/.yarn/bin
 PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin
