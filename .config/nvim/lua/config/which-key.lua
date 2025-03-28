@@ -120,6 +120,7 @@ wk.add({
 	{ '<leader>nc', '<cmd>!npm audit<cr>',                                desc = 'Audit' },
 	{ '<leader>nf', '<cmd>silent !npx -y prettier --write "**/*.js"<cr>', desc = 'Format' },
 	{ '<leader>ni', '<cmd>!npm install<cr>',                              desc = 'Install' },
+	{ '<leader>nl', '<cmd>!npm ls<cr>',                                   desc = 'Packages' },
 	{ '<leader>nu', '<cmd>!npm update<cr>',                               desc = 'Update' },
 	{ '<leader>nv', '<cmd>!npm test<cr>',                                 desc = 'Test' },
 	{ '<leader>nx', '<cmd>!npm start<cr>',                                desc = 'Run' },
