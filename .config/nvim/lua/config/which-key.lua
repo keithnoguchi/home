@@ -5,17 +5,18 @@ wk.add({
 	mode = { "n", "v" },
 
 	-- Top level commands
-	{ '<leader>c',                              group = 'Cargo' },
+	{ '<leader>c',                              group = 'Cargo/Rust' },
 	{ '<leader>d', '<cmd>bdelete!<cr>',         desc  = 'Kill buffer' },
 	{ '<leader>e', '<cmd>NvimTreeToggle<cr>',   desc  = 'Explore' },
 	{ '<leader>f',                              group = 'File' },
-	{ '<leader>g',                              group = 'Golang' },
+	{ '<leader>g',                              group = 'Go' },
 	{ '<leader>h', '<c-w>h',                    desc  = 'Move left' },
 	{ '<leader>i',                              group = 'Info' },
 	{ '<leader>j', '<c-w>j',                    desc  = 'Move down' },
 	{ '<leader>k', '<c-w>k',                    desc  = 'Move up' },
 	{ '<leader>l', '<c-w>l',                    desc  = 'Move right' },
-	{ '<leader>n', '<cmd>set number!<cr>',      desc  = 'Toggle line number' },
+	{ '<leader>n',						        desc  = 'NPM/JavaScript' },
+	{ '<leader>m', '<cmd>set number!<cr>',      desc  = 'Toggle line number' },
 	{ '<leader>p', '<cmd>Lazy<cr>',             desc  = 'Plugin Manager' },
 	{ '<leader>q', '<cmd>q<cr>',                desc  = 'Quit' },
 	{ '<leader>r', '<cmd>luafile %<cr>',        desc  = 'Reload Luafile' },
@@ -106,6 +107,23 @@ wk.add({
 	{ '<leader>ir', '<cmd>Telescope registers<cr>', desc = 'Search registers' },
 	{ '<leader>is', '<cmd>nohlsearch<cr>',          desc = 'Clear search highlights' },
 
+	--- NPM/JavaScript
+	{ '<leader>na',
+		function()
+			local input = vim.fn.input('Package: ')
+			if input ~= '' then
+				vim.cmd('!npm install ' .. input)
+			end
+		end,
+		desc = 'Package',
+	},
+	{ '<leader>nc', '<cmd>!npm audit<cr>',                                desc = 'Audit' },
+	{ '<leader>nf', '<cmd>silent !npx -y prettier --write "**/*.js"<cr>', desc = 'Format' },
+	{ '<leader>ni', '<cmd>!npm install<cr>',                              desc = 'Install' },
+	{ '<leader>nu', '<cmd>!npm update<cr>',                               desc = 'Update' },
+	{ '<leader>nv', '<cmd>!npm test<cr>',                                 desc = 'Test' },
+	{ '<leader>nx', '<cmd>!npm start<cr>',                                desc = 'Run' },
+
 	-- Tmux
 	{ '<leader>ts',                       group = 'Sessions' },
 	{ '<leader>tsj',
@@ -176,7 +194,7 @@ wk.add({
 		desc = 'Maximize pane',
 	},
 
-	-- Windows
+	-- Windowing
 	{ '<leader>wc',                                 group = 'Copilot' },
 	{ '<leader>we', '<cmd>edit!<cr>',               desc = 'Reload buffer' },
 	{ '<leader>wf', '<cmd>resize +10<cr>',          desc = 'Taller hight' },
