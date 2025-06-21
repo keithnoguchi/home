@@ -5,6 +5,7 @@ wk.add({
 	mode = { "n", "v" },
 
 	-- Top level commands
+	{ '<leader>a', '<cmd>Telescope find_files<cr>',desc = 'Files' },
 	{ '<leader>c',                              group = 'Cargo/Rust' },
 	{ '<leader>d', '<cmd>bdelete!<cr>',         desc  = 'Kill buffer' },
 	{ '<leader>e', '<cmd>NvimTreeToggle<cr>',   desc  = 'Explore' },
@@ -19,11 +20,12 @@ wk.add({
 	{ '<leader>m', '<cmd>set number!<cr>',      desc  = 'Toggle line number' },
 	{ '<leader>p', '<cmd>Lazy<cr>',             desc  = 'Plugin Manager' },
 	{ '<leader>q', '<cmd>q<cr>',                desc  = 'Quit' },
-	{ '<leader>r', '<cmd>luafile %<cr>',        desc  = 'Reload Luafile' },
+	{ '<leader>r', '<cmd>edit!<cr>',            desc  = 'Reload' },
 	{ '<leader>s', '<cmd>w!<cr>',               desc  = 'Save' },
 	{ '<leader>t',                              group = 'Tmux' },
+	{ '<leader>v', '<cmd>Telescope buffers<cr>',desc  = 'Buffers' },
 	{ '<leader>w',                              group = 'Window' },
-	{ '<leader>x',                              group = 'Terminal' },
+	{ '<leader>x', '<cmd>split|terminal<cr>',   desc  = 'Terminal' },
 	{ '<leader>z', '<c-z>',                     desc  = 'Suspend' },
 
 	{
@@ -67,6 +69,7 @@ wk.add({
 	{ '<leader>ff', '<cmd>Telescope find_files<cr>',  desc = 'Find files' },
 	{ '<leader>fg', '<cmd>Telescope live_grep<cr>',   desc = 'Live grep' },
 	{ '<leader>fh', '<cmd>Telescope help_tags<cr>',   desc = 'Help tags' },
+	{ '<leader>fl', '<cmd>luafile %<cr>',             desc = 'Reload Luafile' },
 	{ '<leader>fv', '<cmd>Telescope buffers<cr>',     desc = 'Buffers' },
 
 	--- Golang
@@ -197,12 +200,12 @@ wk.add({
 
 	-- Windowing
 	{ '<leader>wc',                                 group = 'Copilot' },
-	{ '<leader>we', '<cmd>edit!<cr>',               desc = 'Reload buffer' },
 	{ '<leader>wf', '<cmd>resize +10<cr>',          desc = 'Taller hight' },
 	{ '<leader>wh', '<c-w>s',                       desc = 'Split holizontally' },
 	{ '<leader>wn', '<cmd>vertical resize -10<cr>', desc = 'Narrow width' },
 	{ '<leader>wo', '<c-w>o',                       desc = 'Single window' },
 	{ '<leader>wq', '<c-w>q',                       desc = 'Quit window' },
+	{ '<leader>wr', '<cmd>edit!<cr>',               desc = 'Reload buffer' },
 	{ '<leader>ws', '<cmd>resize -10<cr>',          desc = 'Shorter hight' },
 	{ '<leader>wv', '<c-w>v',                       desc = 'Split vertically' },
 	{ '<leader>ww', '<cmd>vertical resize +10<cr>', desc = 'Widen width' },
@@ -243,8 +246,4 @@ wk.add({
 	{ '<leader>wcs', '<cmd>CopilotChatSave<cr>', desc = 'Save' },
 	{ '<leader>wct', '<cmd>CopilotChatTest<cr>', desc = 'Test' },
 	{ '<leader>wcv', '<cmd>CopilotChatToggle<cr>', desc = 'Toggle' },
-
-	-- Terminal
-	{ '<leader>xh', '<cmd>split|terminal<cr>', desc  = 'Holizontal terminal' },
-	{ '<leader>xv', '<cmd>vsplit|terminal<cr>', desc  = 'Vertical terminal' },
 })
