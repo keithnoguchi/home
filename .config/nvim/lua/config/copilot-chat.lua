@@ -9,6 +9,7 @@ cc.setup({
 	accept_diff = true,
 	question_header = ' me ',
 	answer_header = ' Mr. Wizard ',
+	model = 'gpt-4o-mini',
 	mappings = {
 		close = {
 			normal = 'd',
