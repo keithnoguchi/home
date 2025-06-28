@@ -20,13 +20,14 @@ wk.add({
 	{ '<leader>m', '<cmd>set number!<cr>',      desc  = 'Toggle line number' },
 	{ '<leader>p', '<cmd>Lazy<cr>',             desc  = 'Plugin Manager' },
 	{ '<leader>q', '<cmd>q<cr>',                desc  = 'Quit' },
-	{ '<leader>r', '<cmd>edit!<cr>',            desc  = 'Reload' },
+	{ '<leader>r', '<cmd>edit!<cr>',            desc  = 'Reload buffer' },
 	{ '<leader>s', '<cmd>w!<cr>',               desc  = 'Save' },
 	{ '<leader>t',                              group = 'Tmux' },
 	{ '<leader>v', '<cmd>Telescope buffers<cr>',desc  = 'Buffers' },
 	{ '<leader>w',                              group = 'Window' },
 	{ '<leader>x', '<cmd>split|terminal<cr>',   desc  = 'Terminal' },
 	{ '<leader>z', '<c-z>',                     desc  = 'Suspend' },
+	{ '<leader>.', '<cmd>CopilotChatToggle<cr>',desc  = 'Copilot' },
 
 	{
 		-- terminal mode mappings.
@@ -69,7 +70,6 @@ wk.add({
 	{ '<leader>ff', '<cmd>Telescope find_files<cr>',  desc = 'Find files' },
 	{ '<leader>fg', '<cmd>Telescope live_grep<cr>',   desc = 'Live grep' },
 	{ '<leader>fh', '<cmd>Telescope help_tags<cr>',   desc = 'Help tags' },
-	{ '<leader>fl', '<cmd>luafile %<cr>',             desc = 'Reload Luafile' },
 	{ '<leader>fv', '<cmd>Telescope buffers<cr>',     desc = 'Buffers' },
 
 	--- Golang
@@ -202,6 +202,7 @@ wk.add({
 	{ '<leader>wc',                                 group = 'Copilot' },
 	{ '<leader>wf', '<cmd>resize +10<cr>',          desc = 'Taller hight' },
 	{ '<leader>wh', '<c-w>s',                       desc = 'Split holizontally' },
+	{ '<leader>wl', '<cmd>luafile %<cr>',           desc = 'Reload Luafile' },
 	{ '<leader>wn', '<cmd>vertical resize -10<cr>', desc = 'Narrow width' },
 	{ '<leader>wo', '<c-w>o',                       desc = 'Single window' },
 	{ '<leader>wq', '<c-w>q',                       desc = 'Quit window' },
