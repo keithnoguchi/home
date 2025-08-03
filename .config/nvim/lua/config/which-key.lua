@@ -16,8 +16,8 @@ wk.add({
 	{ '<leader>j', '<c-w>j',                    desc  = 'Move down' },
 	{ '<leader>k', '<c-w>k',                    desc  = 'Move up' },
 	{ '<leader>l', '<c-w>l',                    desc  = 'Move right' },
+	{ '<leader>m', '<c-w>_',                    desc  = 'Max out window' },
 	{ '<leader>n',						        desc  = 'NPM/JavaScript' },
-	{ '<leader>m', '<cmd>set number!<cr>',      desc  = 'Toggle line number' },
 	{ '<leader>p', '<cmd>Lazy<cr>',             desc  = 'Plugin Manager' },
 	{ '<leader>q', '<cmd>q<cr>',                desc  = 'Quit' },
 	{ '<leader>r', '<cmd>edit!<cr>',            desc  = 'Reload buffer' },
@@ -27,7 +27,10 @@ wk.add({
 	{ '<leader>w',                              group = 'Window' },
 	{ '<leader>x', '<cmd>split|terminal<cr>',   desc  = 'Terminal' },
 	{ '<leader>z', '<c-z>',                     desc  = 'Suspend' },
+	{ '<leader>,', '<c-w>=',                    desc  = 'Equal windows' },
 	{ '<leader>.', '<cmd>CopilotChatToggle<cr>',desc  = 'Copilot' },
+	{ '<leader>-', '<c-w>s',                    desc  = 'Split holizontally' },
+	{ '<leader>;', '<c-w>v',                    desc  = 'Split vertically' },
 
 	{
 		-- terminal mode mappings.
@@ -203,6 +206,7 @@ wk.add({
 	{ '<leader>wf', '<cmd>resize +10<cr>',          desc = 'Taller hight' },
 	{ '<leader>wh', '<c-w>s',                       desc = 'Split holizontally' },
 	{ '<leader>wl', '<cmd>luafile %<cr>',           desc = 'Reload Luafile' },
+	{ '<leader>wm', '<cmd>set number!<cr>',         desc  = 'Toggle line number' },
 	{ '<leader>wn', '<cmd>vertical resize -10<cr>', desc = 'Narrow width' },
 	{ '<leader>wo', '<c-w>o',                       desc = 'Single window' },
 	{ '<leader>wq', '<c-w>q',                       desc = 'Quit window' },
