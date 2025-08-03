@@ -39,8 +39,6 @@ wk.add({
 	},
 
 	-- Buffer navigation
-	{ '<tab>',   '<cmd>bnext<cr>', desc = 'Next buffer' },
-	{ '<s-tab>', '<cmd>bprev<cr>', desc = 'Previous buffer' },
 	{ '<c-j>',   '<cmd>bnext<cr>', desc = 'Next buffer' },
 	{ '<c-k>',   '<cmd>bprev<cr>', desc = 'Previous buffer' },
 
