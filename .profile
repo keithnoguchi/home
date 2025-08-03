@@ -13,6 +13,7 @@ if [ "$(uname)" = "Darwin" ]; then
 fi
 # push head
 PATH=$GOPATH/bin:$PATH
+PATH=$HOME/.flutter/bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
 PATH=$HOME/.local/bin:$PATH
 # push tail
