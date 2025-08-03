@@ -49,6 +49,13 @@ cmp.setup.filetype('rust', {
 	}),
 })
 
+-- Disable copilot suggestions in the Dart source code.
+cmp.setup.filetype('dart', {
+	sources = cmp.config.sources({
+		{ name = 'nvim_lsp', group_index = 1},
+	}),
+})
+
 -- Disable completion in the terminal mode
 vim.cmd([[
 	augroup DisableCopilotInTerminal

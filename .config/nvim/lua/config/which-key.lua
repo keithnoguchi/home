@@ -7,7 +7,7 @@ wk.add({
 	-- Top level commands
 	{ '<leader>a', '<cmd>Telescope find_files<cr>',desc = 'Files' },
 	{ '<leader>c',                              group = 'Cargo/Rust' },
-	{ '<leader>d', '<cmd>bdelete!<cr>',         desc  = 'Kill buffer' },
+	{ '<leader>d',                              group = 'Dart/Flutter' },
 	{ '<leader>e', '<cmd>NvimTreeToggle<cr>',   desc  = 'Explore' },
 	{ '<leader>f',                              group = 'File' },
 	{ '<leader>g',                              group = 'Go' },
@@ -65,6 +65,12 @@ wk.add({
 	{ '<leader>cwc', '<cmd>!cargo check --workspace<cr>',           desc = 'Check' },
 	{ '<leader>cwr', '<cmd>!cargo build --workspace --release<cr>', desc = 'Release build' },
 	{ '<leader>cwv', '<cmd>!cargo test --workspace<cr>',            desc = 'Test' },
+
+	-- Dart/Flutter
+	{ '<leader>dc', '<cmd>!dart analyze %<cr>',       desc = 'Check' },
+	{ '<leader>df', '<cmd>silent !dart format %<cr>', desc = 'Format' },
+	{ '<leader>dv', '<cmd>!dart test<cr>',            desc = 'Test' },
+	{ '<leader>dx', '<cmd>!dart run<cr>',             desc = 'Run' },
 
 	-- File operations
 	{ '<leader>fc', '<cmd>Telescope colorscheme<cr>', desc = 'Color scheme' },
@@ -201,10 +207,11 @@ wk.add({
 
 	-- Windowing
 	{ '<leader>wc',                                 group = 'Copilot' },
+	{ '<leader>wd', '<cmd>bdelete!<cr>',            desc = 'Delete buffer' },
 	{ '<leader>wf', '<cmd>resize +10<cr>',          desc = 'Taller hight' },
 	{ '<leader>wh', '<c-w>s',                       desc = 'Split holizontally' },
 	{ '<leader>wl', '<cmd>luafile %<cr>',           desc = 'Reload Luafile' },
-	{ '<leader>wm', '<cmd>set number!<cr>',         desc  = 'Toggle line number' },
+	{ '<leader>wm', '<cmd>set number!<cr>',         desc = 'Toggle line number' },
 	{ '<leader>wn', '<cmd>vertical resize -10<cr>', desc = 'Narrow width' },
 	{ '<leader>wo', '<c-w>o',                       desc = 'Single window' },
 	{ '<leader>wq', '<c-w>q',                       desc = 'Quit window' },

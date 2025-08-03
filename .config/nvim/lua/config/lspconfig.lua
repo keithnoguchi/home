@@ -38,6 +38,9 @@ lsp.rust_analyzer.setup{
 	},
 }
 
+-- Dart/Flutter
+lsp.dartls.setup{}
+
 -- Golang
 lsp.gopls.setup{
 	cmd = {'gopls'},
