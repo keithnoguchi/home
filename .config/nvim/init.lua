@@ -9,6 +9,9 @@ require("keymaps")
 --- https://medium.com/@shaikzahid0713/managing-plugins-using-lazy-d31e6dde3479
 require("config.lazy")
 
+--- file type based autocmds setup.
+require('config.autocmds')
+
 --- https://medium.com/@shaikzahid0713/which-key-7554ac347c9d
 require("config.which-key")
 
