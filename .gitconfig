@@ -1,11 +1,13 @@
 [alias]
 	a    = add
 	b    = branch
+	bl   = branch -vv
 	c    = config
 	ci   = commit
 	co   = checkout
 	d    = diff
 	f    = fetch
+	ftp  = fetch -tp
 	i    = init
 	l    = log
 	m    = mv
