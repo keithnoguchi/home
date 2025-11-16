@@ -2,6 +2,7 @@
 	a    = add
 	b    = branch
 	bl   = branch -vv
+	br   = branch -r
 	c    = config
 	ci   = commit
 	co   = checkout
