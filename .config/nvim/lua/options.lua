@@ -45,3 +45,6 @@ opt.wrap = true -- Disable line wrap
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+
+-- Default colorscheme
+vim.cmd('colorscheme zellner')
