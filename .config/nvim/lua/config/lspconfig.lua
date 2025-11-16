@@ -27,9 +27,7 @@ lsp.rust_analyzer.setup{
 	settings = {
 		['rust-analyzer'] = {
 			cargo = { allFeatures = true },
-			checkOnSave = {
-				command = 'clippy',
-			},
+			checkOnSave = true,
 			inlayHints = {
 				enable = false,
 				chainingHints = true,
