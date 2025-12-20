@@ -24,15 +24,15 @@ wk.add({
 	{ '<leader>r', '<cmd>edit!<cr>',            desc  = 'Reload buffer' },
 	{ '<leader>s', '<cmd>w!<cr>',               desc  = 'Save' },
 	{ '<leader>t',                              group = 'Tmux' },
-	{ '<leader>v', '<cmd>Telescope buffers<cr>',desc  = 'Buffers' },
+	{ '<leader>v', '<cmd>Telescope buffers<cr>',desc  = 'Show buffers' },
 	{ '<leader>w',                              group = 'Window' },
-	{ '<leader>x', '<cmd>vsplit|terminal<cr>',  desc  = 'Terminal' },
-	{ '<leader>z', '<c-z>',                     desc  = 'Suspend' },
+	{ '<leader>x', '<cmd>vsplit|terminal<cr>',  desc  = 'Open v-terminal' },
+	{ '<leader>z', '<cmd>split|terminal<cr>',   desc  = 'Open terminal' },
 	{ '<leader>,', '<c-w>=',                    desc  = 'Equalize windows' },
-	{ '<leader>.', '<c-w>_',                    desc  = 'Taller window' },
 	{ '<leader>-', '<c-w>s',                    desc  = 'Split holizontally' },
-	{ '<leader>;', '<c-w>v',                    desc  = 'Split vertically' },
+	{ '<leader>.', '<c-w>_',                    desc  = 'Taller window' },
 	{ '<leader>/', '<cmd>CopilotChatToggle<cr>',desc  = 'Copilot' },
+	{ '<leader>;', '<c-w>v',                    desc  = 'Split vertically' },
 
 	{
 		-- terminal mode mappings.
