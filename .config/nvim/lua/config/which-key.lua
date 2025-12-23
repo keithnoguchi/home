@@ -28,9 +28,9 @@ wk.add({
 	{ '<leader>w',                              group = 'Window' },
 	{ '<leader>x', '<cmd>vsplit|terminal<cr>',  desc  = 'Open v-terminal' },
 	{ '<leader>z', '<cmd>split|terminal<cr>',   desc  = 'Open terminal' },
-	{ '<leader>,', '<c-w>=',                    desc  = 'Equalize windows' },
+	{ '<leader>,', '<c-w>_',                    desc  = 'Taller window' },
 	{ '<leader>-', '<c-w>s',                    desc  = 'Split holizontally' },
-	{ '<leader>.', '<c-w>_',                    desc  = 'Taller window' },
+	{ '<leader>.', '<c-w>=',                    desc  = 'Equalize windows' },
 	{ '<leader>/', '<cmd>CopilotChatToggle<cr>',desc  = 'Copilot' },
 	{ '<leader>;', '<c-w>v',                    desc  = 'Split vertically' },
 
