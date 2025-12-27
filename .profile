@@ -25,9 +25,6 @@ PATH=$PATH:/usr/share/bcc/tools
 PATH=$PATH:/usr/share/bpftrace/tools
 PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
 
-# Rust
-source $HOME/.cargo/env
-
 # SSH agent
 if [ -z $SSH_AUTH_SOCK ]; then
 	eval `ssh-agent -s`
@@ -47,9 +44,4 @@ source ~/.kubectl_aliases
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/src/google-cloud-sdk/path.bash.inc" ]; then
 	. "$HOME/src/google-cloud-sdk/path.bash.inc"
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/src/google-cloud-sdk/completion.bash.inc" ]; then
-	. "$HOME/src/google-cloud-sdk/completion.bash.inc"
 fi
